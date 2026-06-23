@@ -1,6 +1,6 @@
 # Mansoor Mamnoon
 
-> UC Berkeley EECS Honors, Class of 2027 (GPA 3.973). Systems and infrastructure engineer. Databricks SWE Intern on the Traffic Platform team (Go, Rust, GCP network control plane). Former Amazon SDE Intern. Builds LLM security systems, low-latency C++ trading infrastructure, multi-cloud developer tooling, and offline reinforcement learning frameworks. Open to 2027 new-grad roles in distributed systems, infrastructure, low-latency, and compilers.
+> UC Berkeley EECS Honors, Class of 2027 (GPA 3.973). Systems and infrastructure engineer. Databricks SWE Intern on the Traffic Platform team (Go, Rust, GCP network control plane). Former Amazon SDE Intern. Builds eBPF Linux networking diagnostics, LLM security systems, low-latency C++ trading infrastructure, multi-cloud developer tooling, and offline reinforcement learning frameworks. Open to 2027 new-grad roles in distributed systems, infrastructure, low-latency, networking, and compilers.
 
 ## Quick facts
 
@@ -10,7 +10,7 @@
 - **Website**: https://mansoor-mamnoon.github.io/
 - **GPA**: 3.973 — UC Berkeley EECS Honors Program, Class of 2027
 - **Languages**: C++20, Go, Rust, Python, TypeScript, Java, C
-- **Domains**: Distributed Systems · Networking · Low-Latency Infrastructure · LLM Agent Security · HFT Systems · Database Internals · Compilers
+- **Domains**: Distributed Systems · Networking · eBPF / Linux Kernel · Low-Latency Infrastructure · LLM Agent Security · HFT Systems · Database Internals · Compilers
 
 ---
 
@@ -34,6 +34,21 @@ Python scraping/ranking system with trie-based prefix matching, vectorized scori
 ---
 
 ## Projects
+
+### vxlan-tracer (Jun 2026)
+eBPF diagnostic tool for VXLAN MTU blackholes — the silent network failure where large payloads stall with no error logged while small pings pass.
+
+**What it does**: Attaches four BPF programs simultaneously: TC sched_cls ingress hook on the underlay (counts arriving ICMP PTBs), TC sched_cls egress hook on the VXLAN overlay (records max outer packet size before encapsulation), kprobe on `ip_do_fragment` (fragmentation counter), and kprobe on `icmp_rcv` (PTBs reaching the kernel ICMP handler). Reads all four counters from pinned BPF maps after the measurement window and combines them into one of six verdicts. TC ownership is verified with an exact 3-tuple (priority 50000, handle 0x7674_0001, kernel-assigned BPF program ID) so cleanup never removes a filter it does not own. Partial attach failure triggers rollback of exactly what was recorded.
+
+**Six verdicts**: `VXLAN_FRAGMENTATION_OBSERVED`, `PTB_SUPPRESSED`, `PTB_DELIVERED`, `VXLAN_MTU_MISCONFIGURATION`, `VXLAN_MTU_OK`, `NO_SIGNAL`. Each includes corroborating evidence fields and a human-readable recommendation.
+
+**Results**: 6/6 verdict scenarios confirmed on Linux 5.15.0-181-generic (aarch64). 20/20 TC coexistence cases pass (cases A–F: unrelated filter preservation, priority-collision safety, partial rollback, SIGINT/SIGTERM cleanup, repeated runs). Builds to arm64 and amd64 static binaries with 4 embedded BPF objects. BTF CO-RE — no kernel headers required.
+
+**Stack**: Go, eBPF (C), TC sched_cls, kprobes, BTF CO-RE, Linux netlink, cilium/ebpf, vishvananda/netlink
+
+**GitHub**: https://github.com/mansoor-mamnoon/vxlan-tracer
+
+---
 
 ### LLMFirewall (Dec 2025–May 2026)
 Real async stdio MCP security proxy for tool-using LLM agents. Installable: `pip install llmfirewall`.
@@ -116,18 +131,19 @@ Selected coursework: OS (162), Compilers (164), Database Systems (186), Algorith
 
 | Area | Technologies |
 |------|-------------|
-| Systems | C++20, Go, Rust, C |
+| Systems | C++20, Go, Rust, C, eBPF |
+| Linux Kernel | TC sched_cls, kprobes, BTF CO-RE, netlink, cilium/ebpf |
 | Backend | Python, TypeScript, Java |
-| Infrastructure | AWS (Lambda, ECS, DynamoDB, SQS, Timestream, CDK), Pulumi, Docker, GitHub Actions |
+| Infrastructure | AWS (Lambda, ECS, DynamoDB, SQS, Timestream, CDK), GCP, Pulumi, Docker, GitHub Actions |
 | ML / Data | PyTorch, OpenAI Gym, pandas, NumPy, TensorBoard |
-| Domains | Distributed Systems, Networking, Compilers, Database Internals, LLM Agent Security, Low-Latency Infrastructure, HFT Systems |
+| Domains | Distributed Systems, Networking, eBPF, Linux Kernel, Compilers, Database Internals, LLM Agent Security, Low-Latency Infrastructure, HFT Systems |
 
 ---
 
 ## Pages
 
 - [Home](https://mansoor-mamnoon.github.io/): Full profile, quick stats, project metric pills
-- [Projects](https://mansoor-mamnoon.github.io/projects.html): Detailed technical write-ups for all four projects
+- [Projects](https://mansoor-mamnoon.github.io/projects.html): Detailed technical write-ups for all projects (vxlan-tracer, LLMFirewall, C++ Matching Engine, Edge Deployer, Offline RL Agent)
 - [Experience](https://mansoor-mamnoon.github.io/experience.html): Full work history, teaching, and education timeline
 - [Resume](https://mansoor-mamnoon.github.io/resume.html): One-page resume (HTML + PDF)
 - [Profile](https://mansoor-mamnoon.github.io/about.html): Personal background, quick facts, contact
