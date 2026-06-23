@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projects — Mansoor Mamnoon | C++ Matching Engine · LLMFirewall · Systems</title>
-  <meta name="description" content="Systems projects by Mansoor Mamnoon (Berkeley EECS): C++20 matching engine at 20.7M msgs/sec and p50 0.04µs; LLMFirewall MCP security proxy (839 tests, 0% ASR gate ablation, 0.16ms latency); Edge Deployer (6 providers, 85 tests); Offline RL Agent (6 algorithms, safety constraints, OPE).">
+  <title>Projects — Mansoor Mamnoon | eBPF · C++ Matching Engine · LLMFirewall · Systems</title>
+  <meta name="description" content="Systems projects by Mansoor Mamnoon (Berkeley EECS): vxlan-tracer eBPF VXLAN diagnostic (4 BPF programs, 6 verdicts, TC lifecycle safe); C++20 matching engine at 20.7M msgs/sec; LLMFirewall MCP security proxy (839 tests, 0% ASR gate ablation); Edge Deployer (6 providers, 85 tests); Offline RL Agent.">
   <meta name="robots" content="index, follow">
-  <meta property="og:title"       content="Projects — Mansoor Mamnoon | C++ Matching Engine · LLMFirewall">
-  <meta property="og:description" content="C++20 matching engine at 20.7M msgs/sec · LLMFirewall MCP proxy (0% ASR gate, 839 tests) · Edge Deployer (6 providers) · Offline RL Agent — by Mansoor Mamnoon.">
+  <meta property="og:title"       content="Projects — Mansoor Mamnoon | eBPF · C++ Matching Engine · LLMFirewall">
+  <meta property="og:description" content="vxlan-tracer eBPF VXLAN diagnostic · C++20 matching engine 20.7M msgs/sec · LLMFirewall MCP proxy (0% ASR gate, 839 tests) · Edge Deployer (6 providers) — by Mansoor Mamnoon.">
   <meta property="og:image"       content="https://mansoor-mamnoon.github.io/preview.webp">
   <meta property="og:url"         content="https://mansoor-mamnoon.github.io/projects.html">
   <meta property="og:type"        content="website">
   <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Projects — Mansoor Mamnoon | C++ Matching Engine · LLMFirewall">
-  <meta name="twitter:description" content="C++20 matching engine 20.7M msgs/sec · LLMFirewall 0% ASR gate ablation, 839 tests · Edge Deployer 6 providers · Offline RL Agent.">
+  <meta name="twitter:title"       content="Projects — Mansoor Mamnoon | eBPF · C++ Matching Engine · LLMFirewall">
+  <meta name="twitter:description" content="vxlan-tracer eBPF VXLAN diagnostic (4 BPF programs) · C++20 matching engine 20.7M msgs/sec · LLMFirewall 0% ASR gate · Offline RL Agent.">
   <meta name="twitter:image"       content="https://mansoor-mamnoon.github.io/preview.webp">
-  <meta name="keywords" content="LLMFirewall, prompt injection defense, MCP security proxy, LLM agent security, C++ matching engine, limit order book, HFT, high frequency trading, low latency systems, edge deployer, serverless deployment, Cloudflare Workers, AWS Lambda, offline reinforcement learning, CQL, IQL, AWAC, PyTorch, Mansoor Mamnoon, Berkeley EECS, systems engineer portfolio">
+  <meta name="keywords" content="vxlan-tracer, eBPF, VXLAN MTU, Linux networking, TC sched_cls, kprobe, LLMFirewall, prompt injection defense, MCP security proxy, LLM agent security, C++ matching engine, limit order book, HFT, high frequency trading, low latency systems, edge deployer, serverless deployment, Cloudflare Workers, AWS Lambda, offline reinforcement learning, CQL, IQL, AWAC, PyTorch, Mansoor Mamnoon, Berkeley EECS, systems engineer portfolio">
   <link rel="canonical" href="https://mansoor-mamnoon.github.io/projects.html">
   <link rel="alternate" type="text/plain" title="LLM-readable profile" href="https://mansoor-mamnoon.github.io/llms.txt">
 
@@ -63,6 +63,20 @@
       "@id": "https://mansoor-mamnoon.github.io/#person"
     },
     "keywords": ["Electron", "serverless", "Cloudflare Workers", "AWS Lambda", "multi-cloud", "developer tooling", "edge computing"]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "vxlan-tracer",
+    "description": "eBPF diagnostic tool for VXLAN MTU blackholes. Attaches 4 BPF programs (TC sched_cls + kprobes on ip_do_fragment/icmp_rcv) and returns one of 6 verdicts in a single 5-60s run. TC lifecycle safe: collision check, identity-verified cleanup, idempotent Close(). 20/20 TC coexistence cases pass on Linux 5.15.",
+    "codeRepository": "https://github.com/mansoor-mamnoon/vxlan-tracer",
+    "programmingLanguage": ["Go", "C"],
+    "author": {
+      "@type": "Person",
+      "name": "Mansoor Mamnoon",
+      "@id": "https://mansoor-mamnoon.github.io/#person"
+    },
+    "keywords": ["eBPF", "VXLAN", "Linux networking", "TC sched_cls", "kprobe", "MTU blackhole", "network diagnostics", "Go", "BTF CO-RE"]
   },
   {
     "@context": "https://schema.org",
@@ -162,6 +176,11 @@
           <span class="proj-nav-name">Limit Order Book</span>
           <span class="proj-nav-type">performance · C++20</span>
           <span class="proj-nav-metric">20.7M msg/s · p50 = 0.04 µs</span>
+        </button>
+        <button class="proj-nav-item" data-project="vxlantracer" aria-controls="vxlantracer">
+          <span class="proj-nav-name">vxlan-tracer</span>
+          <span class="proj-nav-type">networking · eBPF · Linux</span>
+          <span class="proj-nav-metric">4 BPF programs · 6 verdicts · TC safe</span>
         </button>
         <button class="proj-nav-item" data-project="edgedeployer" aria-controls="edgedeployer">
           <span class="proj-nav-name">Edge Deployer</span>
@@ -335,6 +354,83 @@
         <div class="proj-links">
           <a href="https://github.com/mansoor-mamnoon/limit-order-book" class="btn btn-primary" target="_blank" rel="noopener">GitHub ↗</a>
           <a href="https://github.com/mansoor-mamnoon/limit-order-book#readme" class="btn" target="_blank" rel="noopener">Design Notes ↗</a>
+        </div>
+      </div>
+
+      <!-- vxlan-tracer -->
+      <div class="proj-panel" id="vxlantracer" role="region" aria-label="vxlan-tracer project detail">
+        <h2 class="proj-panel-title">vxlan-tracer</h2>
+        <p class="proj-panel-summary">eBPF diagnostic tool for VXLAN MTU blackholes — the silent network failure where large payloads stall with no error logged while small pings pass.</p>
+
+        <div class="proj-demo">
+          <img src="assets/vxlan_tracer_demo.gif" alt="vxlan-tracer demo: interface discovery and VXLAN_FRAGMENTATION_OBSERVED verdict" loading="lazy" style="width:100%;border-radius:4px;border:1px solid var(--border);">
+        </div>
+
+        <div class="project-brief">
+          <div>
+            <span class="brief-label">Problem</span>
+            <p>VXLAN overlay networks silently drop packets when the overlay MTU is misconfigured: small traffic passes, large payloads stall, and no error is logged anywhere. <code>kubectl cp</code> hangs. Large API responses never arrive. The only signal is a timing correlation between payload size and hang — which most operators never notice is MTU-related.</p>
+          </div>
+          <div>
+            <span class="brief-label">System</span>
+            <p>Four BPF programs attach simultaneously: TC sched_cls hooks on the overlay egress (reads outer packet size before VXLAN encapsulation) and underlay ingress (counts arriving ICMP PTBs), plus kprobes on <code>ip_do_fragment</code> (fragmentation events) and <code>icmp_rcv</code> (PTBs reaching the kernel). The four counters are read from pinned BPF maps after the measurement window and combined into one of six verdicts. TC ownership is verified with an exact 3-tuple (priority 50000, handle 0x7674_0001, kernel-assigned BPF program ID) so cleanup never removes a filter it doesn't own.</p>
+          </div>
+          <div>
+            <span class="brief-label">Proof</span>
+            <p>6/6 verdict scenarios confirmed on Linux 5.15 (aarch64). TC coexistence: 20/20 cases pass — unrelated CNI filters survive, priority-collision filters are never deleted, SIGINT/SIGTERM cleanup is complete, repeated runs succeed without manual teardown. Builds to arm64 and amd64 static binaries with 4 embedded BPF objects.</p>
+          </div>
+        </div>
+
+        <div class="proj-section">
+          <h4>What I Built</h4>
+          <ul>
+            <li><strong>4 BPF programs:</strong> TC ingress (counts ICMP PTBs arriving at underlay), TC egress (records max outer IP size on overlay), kprobe/<code>ip_do_fragment</code> (fragmentation counter), kprobe/<code>icmp_rcv</code> (PTBs reaching kernel ICMP handler). All loaded via cilium/ebpf with BTF CO-RE — no kernel headers required.</li>
+            <li><strong>6 verdict types:</strong> <code>VXLAN_FRAGMENTATION_OBSERVED</code>, <code>PTB_SUPPRESSED</code>, <code>PTB_DELIVERED</code>, <code>VXLAN_MTU_MISCONFIGURATION</code>, <code>VXLAN_MTU_OK</code>, <code>NO_SIGNAL</code>. Each verdict includes corroborating evidence fields and a human-readable recommendation.</li>
+            <li><strong>TC lifecycle safety:</strong> Collision check before attach (returns error, never deletes foreign filters). Cleanup re-lists the kernel's filter table and verifies handle + priority + BPF program ID before deleting. Partial attach failure triggers rollback of exactly what was recorded — no leaking clsact qdiscs. <code>Close()</code> is idempotent.</li>
+            <li><strong>Interface discovery:</strong> <code>vxlan-tracer interfaces</code> lists VXLAN overlays and infers the underlay from the VTEP device index via rtnetlink — no root required.</li>
+            <li><strong>Concurrent-run protection:</strong> <code>flock(LOCK_EX|LOCK_NB)</code> on <code>/run/vxlan-tracer.lock</code> — second invocation fails immediately with a clear error.</li>
+            <li><strong>Privacy-safe diagnostics:</strong> <code>vxlan-tracer collect-environment</code> creates a tar.gz with kernel version, VXLAN interface names/VNIs/MTUs, BTF status, and symbol availability — no IP addresses, no routes, no process lists.</li>
+            <li><strong><code>vxlan-tracer cleanup</code>:</strong> removes stale filters left by a crashed run without touching anything vxlan-tracer doesn't own.</li>
+          </ul>
+        </div>
+
+        <div class="proj-section">
+          <h4>Results</h4>
+          <div class="proj-metrics">
+            <span class="proj-metric">
+              4 BPF programs
+              <span class="metric-note">TC ingress · TC egress · 2 kprobes</span>
+            </span>
+            <span class="proj-metric">
+              6 verdict paths
+              <span class="metric-note">all confirmed on Linux 5.15</span>
+            </span>
+            <span class="proj-metric">
+              20/20 TC coexistence
+              <span class="metric-note">Cases A–F including SIGINT/SIGTERM</span>
+            </span>
+            <span class="proj-metric">arm64 + amd64</span>
+            <span class="proj-metric">BTF CO-RE (no kernel headers)</span>
+          </div>
+        </div>
+
+        <div class="proj-section">
+          <h4>Stack</h4>
+          <div class="proj-stack-chips">
+            <span class="proj-stack-chip">Go</span>
+            <span class="proj-stack-chip">eBPF / C</span>
+            <span class="proj-stack-chip">TC sched_cls</span>
+            <span class="proj-stack-chip">kprobes</span>
+            <span class="proj-stack-chip">BTF CO-RE</span>
+            <span class="proj-stack-chip">Linux netlink</span>
+            <span class="proj-stack-chip">cilium/ebpf</span>
+            <span class="proj-stack-chip">vishvananda/netlink</span>
+          </div>
+        </div>
+
+        <div class="proj-links">
+          <a href="https://github.com/mansoor-mamnoon/vxlan-tracer" class="btn btn-primary" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://github.com/mansoor-mamnoon/vxlan-tracer#readme" class="btn" target="_blank" rel="noopener">Design Notes ↗</a>
         </div>
       </div>
 

@@ -17,7 +17,7 @@
   <meta name="twitter:title"      content="Mansoor Mamnoon — Systems & Infrastructure Engineer">
   <meta name="twitter:description" content="Berkeley EECS Honors · Databricks · Amazon · C++ / Go / Rust">
   <meta name="twitter:image"      content="https://mansoor-mamnoon.github.io/preview.webp">
-  <meta name="keywords" content="Mansoor Mamnoon, Berkeley EECS, Databricks, Amazon, distributed systems, infrastructure engineer, C++, Go, Rust, limit order book, LLMFirewall, systems engineer portfolio">
+  <meta name="keywords" content="Mansoor Mamnoon, Berkeley EECS, Databricks, Amazon, distributed systems, infrastructure engineer, C++, Go, Rust, eBPF, Linux networking, VXLAN, vxlan-tracer, limit order book, LLMFirewall, systems engineer portfolio">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://mansoor-mamnoon.github.io/">
   <link rel="alternate" type="text/plain" title="LLM-readable profile" href="https://mansoor-mamnoon.github.io/llms.txt">
@@ -248,6 +248,17 @@
               <span class="route-arrow" aria-hidden="true">→</span>
             </a>
 
+            <a class="route-row" href="projects.html#vxlantracer" role="row" aria-label="vxlan-tracer — eBPF VXLAN MTU blackhole diagnostic"
+               data-preview-title="vxlan-tracer"
+               data-preview-desc="eBPF tool that attaches TC sched_cls hooks and kprobes to diagnose VXLAN MTU blackholes — the silent failure where large packets drop with no log output. Detects fragmentation, PTB suppression, and stale MTU misconfiguration in a single 5-second diagnostic run."
+               data-preview-tech="Go · eBPF (C) · TC sched_cls · Linux netlink · cilium/ebpf">
+              <span class="route-path" role="cell">vxlan-tracer</span>
+              <span role="cell"><span class="badge badge-tools">networking</span></span>
+              <span class="route-signal" role="cell">eBPF VXLAN diagnostic · 4 BPF programs · 6 verdicts</span>
+              <span class="route-tech" role="cell">Go · eBPF · Linux</span>
+              <span class="route-arrow" aria-hidden="true">→</span>
+            </a>
+
             <a class="route-row" href="projects.html#edgedeployer" role="row" aria-label="Edge Deployer — Multi-cloud serverless IDE"
                data-preview-title="Edge Deployer"
                data-preview-desc="Desktop deployment tool that generates provider-specific serverless configs, provisions infrastructure with Pulumi, streams deploy logs, and normalizes workflows across Cloudflare Workers, Lambda@Edge, and Vercel."
@@ -319,6 +330,22 @@
           <span class="system-stack">C++20 · Python · Docker · Streamlit</span>
         </div>
         <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--muted-dim);margin-top:var(--s3);">Synthetic local benchmark — <a href="https://github.com/mansoor-mamnoon/limit-order-book#readme" target="_blank" rel="noopener" style="color:var(--muted);">hardware spec and harness in repo README</a>.</p>
+      </article>
+
+      <article class="system-record">
+        <div class="system-header">
+          <h2 class="system-name">vxlan-tracer</h2>
+          <a href="https://github.com/mansoor-mamnoon/vxlan-tracer" class="system-link" target="_blank" rel="noopener" aria-label="vxlan-tracer on GitHub">GitHub ↗</a>
+        </div>
+        <p class="system-desc">eBPF diagnostic tool for VXLAN MTU blackholes — the silent failure where large packets drop with no log output while small pings pass. Attaches four BPF programs simultaneously (TC sched_cls ingress/egress + kprobes on <code>icmp_rcv</code> and <code>ip_do_fragment</code>) and returns one of six verdicts in a single 5–60 second run. No kernel module, no config change, no traffic disruption.</p>
+        <img src="assets/vxlan_tracer_demo.gif" alt="vxlan-tracer demo: interfaces discovery and fragmentation verdict" loading="lazy" style="width:100%;border-radius:4px;border:1px solid var(--border);margin:var(--s4) 0;">
+        <div class="system-meta">
+          <span class="system-metric">4 BPF programs</span>
+          <span class="system-metric">6 verdicts</span>
+          <span class="system-metric">TC lifecycle safe</span>
+          <span class="system-metric">arm64 + amd64</span>
+          <span class="system-stack">Go · eBPF (C) · TC sched_cls · Linux netlink</span>
+        </div>
       </article>
 
       <article class="system-record">
