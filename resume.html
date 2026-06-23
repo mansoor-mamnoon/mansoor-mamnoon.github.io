@@ -15,7 +15,7 @@
   <meta name="twitter:title"       content="Resume — Mansoor Mamnoon | Berkeley EECS">
   <meta name="twitter:description" content="Berkeley EECS Honors, Databricks SWE Intern (Traffic Platform), former Amazon SDE Intern. C++, Go, Rust systems engineer.">
   <meta name="twitter:image"       content="https://mansoor-mamnoon.github.io/preview.webp">
-  <meta name="keywords" content="Mansoor Mamnoon resume, Berkeley EECS, software engineering intern, systems engineer, C++, Go, Rust, Python, TypeScript, distributed systems, Databricks, Amazon, new grad 2027, computer science portfolio, matching engine, LLM security">
+  <meta name="keywords" content="Mansoor Mamnoon resume, Berkeley EECS, software engineering intern, systems engineer, C++, Go, Rust, eBPF, Linux networking, vxlan-tracer, Python, TypeScript, distributed systems, Databricks, Amazon, new grad 2027, computer science portfolio, matching engine, LLM security">
   <link rel="canonical" href="https://mansoor-mamnoon.github.io/resume.html">
   <link rel="alternate" type="text/plain" title="LLM-readable profile" href="https://mansoor-mamnoon.github.io/llms.txt">
 
@@ -193,6 +193,20 @@
 
         <div class="resume-row">
           <div class="resume-row-head">
+            <span class="resume-org">vxlan-tracer</span>
+            <span class="resume-date">May – Jun 2026</span>
+          </div>
+          <p class="resume-role">eBPF VXLAN MTU Blackhole Diagnostic Tool</p>
+          <ul class="resume-bullets">
+            <li>Built an eBPF-based CLI in Go + C that diagnoses silent VXLAN packet-drop bugs caused by MTU mismatches — a class of issue that is invisible to standard tooling and common in k3s/Flannel and Calico deployments.</li>
+            <li>Implemented 4 BPF programs (TC sched_cls ingress/egress + kprobes on <code>icmp_rcv</code> and <code>ip_do_fragment</code>) producing 6 diagnostic verdicts; TC attach/detach is identity-verified and rollback-safe on error.</li>
+            <li>Shipped <code>interfaces</code> and <code>collect-environment</code> subcommands; packaged arm64 + amd64 binaries; 41/41 qualification gates PASS on Linux 5.15 kernel (Ubuntu 22.04).</li>
+          </ul>
+          <p class="resume-tech">Go · C · eBPF · Linux TC · kprobes · cilium/ebpf · netlink</p>
+        </div>
+
+        <div class="resume-row">
+          <div class="resume-row-head">
             <span class="resume-org">LLMFirewall</span>
             <span class="resume-date">Dec 2025 – May 2026</span>
           </div>
@@ -302,7 +316,7 @@
             </div>
             <div>
               <span class="resume-skills-label">Domains</span>
-              <span class="resume-skills-value">Distributed Systems, Networking, Compilers, Database Internals, Secure AI Tooling, Low-Latency Infrastructure, HFT Systems</span>
+              <span class="resume-skills-value">Distributed Systems, Linux Kernel Networking, eBPF, Compilers, Database Internals, Secure AI Tooling, Low-Latency Infrastructure, HFT Systems</span>
             </div>
           </div>
         </div>
