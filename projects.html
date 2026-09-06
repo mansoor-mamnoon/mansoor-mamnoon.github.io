@@ -3,21 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projects — Mansoor Mamnoon | eBPF · C++ Matching Engine · LLMFirewall · Systems</title>
-  <meta name="description" content="Systems projects by Mansoor Mamnoon (Berkeley EECS): vxlan-tracer eBPF VXLAN diagnostic (4 BPF programs, 6 verdicts, TC lifecycle safe); C++20 matching engine at 20.7M msgs/sec; LLMFirewall MCP security proxy (839 tests, 0% ASR gate ablation); Edge Deployer (6 providers, 85 tests); Offline RL Agent.">
+  <title>Projects — Mansoor Mamnoon | Systems & Security Engineering</title>
+  <meta name="description" content="Systems projects by Mansoor Mamnoon: vxlan-tracer (eBPF), C++20 matching engine (20.7M msgs/sec), LLMFirewall MCP security proxy, and more.">
   <meta name="robots" content="index, follow">
-  <meta property="og:title"       content="Projects — Mansoor Mamnoon | eBPF · C++ Matching Engine · LLMFirewall">
+  <meta property="og:title"       content="Projects — Mansoor Mamnoon | Systems & Security Engineering">
   <meta property="og:description" content="vxlan-tracer eBPF VXLAN diagnostic · C++20 matching engine 20.7M msgs/sec · LLMFirewall MCP proxy (0% ASR gate, 839 tests) · Edge Deployer (6 providers) — by Mansoor Mamnoon.">
   <meta property="og:image"       content="https://mansoor-mamnoon.github.io/preview.webp">
   <meta property="og:url"         content="https://mansoor-mamnoon.github.io/projects.html">
   <meta property="og:type"        content="website">
   <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Projects — Mansoor Mamnoon | eBPF · C++ Matching Engine · LLMFirewall">
+  <meta name="twitter:title"       content="Projects — Mansoor Mamnoon | Systems & Security Engineering">
   <meta name="twitter:description" content="vxlan-tracer eBPF VXLAN diagnostic (4 BPF programs) · C++20 matching engine 20.7M msgs/sec · LLMFirewall 0% ASR gate · Offline RL Agent.">
   <meta name="twitter:image"       content="https://mansoor-mamnoon.github.io/preview.webp">
   <meta name="keywords" content="vxlan-tracer, eBPF, VXLAN MTU, Linux networking, TC sched_cls, kprobe, LLMFirewall, prompt injection defense, MCP security proxy, LLM agent security, C++ matching engine, limit order book, HFT, high frequency trading, low latency systems, edge deployer, serverless deployment, Cloudflare Workers, AWS Lambda, offline reinforcement learning, CQL, IQL, AWAC, PyTorch, Mansoor Mamnoon, Berkeley EECS, systems engineer portfolio">
   <link rel="canonical" href="https://mansoor-mamnoon.github.io/projects.html">
   <link rel="alternate" type="text/plain" title="LLM-readable profile" href="https://mansoor-mamnoon.github.io/llms.txt">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://mansoor-mamnoon.github.io/"},
+    {"@type":"ListItem","position":2,"name":"Projects","item":"https://mansoor-mamnoon.github.io/projects.html"}
+  ]}
+  </script>
 
 
   <script type="application/ld+json"> 
@@ -28,6 +35,8 @@
     "name": "LLMFirewall",
     "description": "MCP security proxy for tool-using LLM agents. Seven-layer enforcement pipeline; 48% ASR vs 100% no-defense; 0% ASR on tool-side-effect attacks with gate ablation. 839 tests, 0.16ms avg latency. pip install llmfirewall.",
     "codeRepository": "https://github.com/mansoor-mamnoon/prompt-injection-lab",
+    "url": "https://mansoor-mamnoon.github.io/projects.html#llmfirewall",
+    "datePublished": "2026-05",
     "programmingLanguage": ["Python"],
     "author": {
       "@type": "Person",
@@ -42,6 +51,8 @@
     "name": "C++20 Limit Order Book — Matching Engine",
     "description": "Exchange-style matching engine sustaining 20.7M messages/sec at p50 = 0.04 µs on a synthetic local benchmark. Relevant to high-frequency trading and quantitative systems.",
     "codeRepository": "https://github.com/mansoor-mamnoon/limit-order-book",
+    "url": "https://mansoor-mamnoon.github.io/projects.html#orderbook",
+    "datePublished": "2025-08",
     "programmingLanguage": ["C++", "Python"],
     "author": {
       "@type": "Person",
@@ -56,6 +67,8 @@
     "name": "Edge Deployer — Serverless IDE",
     "description": "Electron desktop IDE for deploying serverless APIs to 6 cloud providers (Cloudflare Workers, AWS Lambda, Vercel, Netlify, Fly.io, Railway). AI assistant (Claude API), encrypted vault, load tester, 85 tests.",
     "codeRepository": "https://github.com/mansoor-mamnoon/edge-deployer",
+    "url": "https://mansoor-mamnoon.github.io/projects.html#edgedeployer",
+    "datePublished": "2025-05",
     "programmingLanguage": ["TypeScript", "JavaScript"],
     "author": {
       "@type": "Person",
@@ -70,6 +83,8 @@
     "name": "vxlan-tracer",
     "description": "eBPF diagnostic tool for VXLAN MTU blackholes. Attaches 4 BPF programs (TC sched_cls + kprobes on ip_do_fragment/icmp_rcv) and returns one of 6 verdicts in a single 5-60s run. TC lifecycle safe: collision check, identity-verified cleanup, idempotent Close(). 20/20 TC coexistence cases pass on Linux 5.15.",
     "codeRepository": "https://github.com/mansoor-mamnoon/vxlan-tracer",
+    "url": "https://mansoor-mamnoon.github.io/projects.html#vxlantracer",
+    "datePublished": "2026-06",
     "programmingLanguage": ["Go", "C"],
     "author": {
       "@type": "Person",
@@ -84,6 +99,8 @@
     "name": "Offline RL Agent",
     "description": "Offline reinforcement learning framework with 6 algorithms (BC, CQL, IQL, TD3+BC, DT, AWAC), traffic routing simulator, dataset diagnostics, OPE estimators with bootstrap CIs, policy shield, and causal failure explorer.",
     "codeRepository": "https://github.com/mansoor-mamnoon/offline-rl-agent",
+    "url": "https://mansoor-mamnoon.github.io/projects.html#offlinerl",
+    "datePublished": "2025-06",
     "programmingLanguage": ["Python"],
     "author": {
       "@type": "Person",
@@ -102,6 +119,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
   <script>(function(){var t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();</script>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BWCTKVQ3"></script>
@@ -138,8 +156,8 @@
       <div class="nav-links">
         <a href="projects.html" class="nav-link active">Projects</a>
         <a href="experience.html" class="nav-link">Experience</a>
-
-        <a href="about.html" class="nav-link">Profile</a>
+        <a href="notes.html" class="nav-link">Notes</a>
+        <a href="about.html" class="nav-link">About</a>
       </div>
       <div class="nav-actions">
         <a href="resume.html" class="nav-resume">Resume</a>
@@ -152,8 +170,8 @@
   <div id="nav-drawer" class="nav-drawer">
     <a href="projects.html" class="nav-link">Projects</a>
     <a href="experience.html" class="nav-link">Experience</a>
-
-    <a href="about.html" class="nav-link">Profile</a>
+    <a href="notes.html" class="nav-link">Notes</a>
+    <a href="about.html" class="nav-link">About</a>
     <a href="resume.html" class="nav-resume">Resume</a>
   </div>
 </header>
@@ -204,7 +222,7 @@
         <p class="proj-panel-summary">Real async stdio MCP security proxy enforcing taint-aware least privilege for tool-using LLM agents — installable via <code>pip install llmfirewall</code>.</p>
 
         <div class="proj-demo">
-          <img src="assets/llmfirewall_demo.gif" alt="LLMFirewall demo: prompt injection blocked in real time" loading="lazy" style="width:100%;border-radius:4px;border:1px solid var(--border);">
+          <img src="assets/llmfirewall_demo.gif" alt="LLMFirewall demo: prompt injection blocked in real time" width="960" height="560" loading="lazy" style="width:100%;border-radius:var(--radius);border:1px solid var(--border);">
         </div>
 
         <div class="project-brief">
@@ -279,8 +297,8 @@
         </div>
 
         <div class="proj-links">
-          <a href="https://github.com/mansoor-mamnoon/prompt-injection-lab" class="btn btn-primary" target="_blank" rel="noopener">GitHub ↗</a>
-          <a href="https://github.com/mansoor-mamnoon/prompt-injection-lab#readme" class="btn" target="_blank" rel="noopener">Design Notes ↗</a>
+          <a href="https://github.com/mansoor-mamnoon/prompt-injection-lab" class="btn btn-primary" target="_blank" rel="noopener" aria-label="LLMFirewall source on GitHub">GitHub ↗</a>
+          <a href="https://github.com/mansoor-mamnoon/prompt-injection-lab#readme" class="btn" target="_blank" rel="noopener" aria-label="LLMFirewall design notes on GitHub">Design Notes ↗</a>
         </div>
       </div>
 
@@ -352,8 +370,8 @@
         </div>
 
         <div class="proj-links">
-          <a href="https://github.com/mansoor-mamnoon/limit-order-book" class="btn btn-primary" target="_blank" rel="noopener">GitHub ↗</a>
-          <a href="https://github.com/mansoor-mamnoon/limit-order-book#readme" class="btn" target="_blank" rel="noopener">Design Notes ↗</a>
+          <a href="https://github.com/mansoor-mamnoon/limit-order-book" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Limit Order Book source on GitHub">GitHub ↗</a>
+          <a href="https://github.com/mansoor-mamnoon/limit-order-book#readme" class="btn" target="_blank" rel="noopener" aria-label="Limit Order Book design notes on GitHub">Design Notes ↗</a>
         </div>
       </div>
 
@@ -363,7 +381,7 @@
         <p class="proj-panel-summary">eBPF diagnostic tool for VXLAN MTU blackholes — the silent network failure where large payloads stall with no error logged while small pings pass.</p>
 
         <div class="proj-demo">
-          <img src="assets/vxlan_tracer_demo.gif" alt="vxlan-tracer demo: interface discovery and VXLAN_FRAGMENTATION_OBSERVED verdict" loading="lazy" style="width:100%;border-radius:4px;border:1px solid var(--border);">
+          <img src="assets/vxlan_tracer_demo.gif" alt="vxlan-tracer demo: interface discovery and VXLAN_FRAGMENTATION_OBSERVED verdict" width="944" height="647" loading="lazy" style="width:100%;border-radius:var(--radius);border:1px solid var(--border);">
         </div>
 
         <div class="project-brief">
@@ -428,8 +446,8 @@
         </div>
 
         <div class="proj-links">
-          <a href="https://github.com/mansoor-mamnoon/vxlan-tracer" class="btn btn-primary" target="_blank" rel="noopener">GitHub ↗</a>
-          <a href="https://github.com/mansoor-mamnoon/vxlan-tracer#readme" class="btn" target="_blank" rel="noopener">Design Notes ↗</a>
+          <a href="https://github.com/mansoor-mamnoon/vxlan-tracer" class="btn btn-primary" target="_blank" rel="noopener" aria-label="vxlan-tracer source on GitHub">GitHub ↗</a>
+          <a href="https://github.com/mansoor-mamnoon/vxlan-tracer#readme" class="btn" target="_blank" rel="noopener" aria-label="vxlan-tracer design notes on GitHub">Design Notes ↗</a>
         </div>
       </div>
 
@@ -439,7 +457,7 @@
         <p class="proj-panel-summary">Native desktop IDE for writing, previewing, deploying, and observing serverless functions across 6 cloud providers from a single window.</p>
 
         <div class="proj-demo">
-          <img src="assets/edge_deployer_demo.gif" alt="Edge Deployer demo: write, preview, deploy to Cloudflare" loading="lazy" style="width:100%;border-radius:4px;border:1px solid var(--border);">
+          <img src="assets/edge_deployer_demo.gif" alt="Edge Deployer demo: write, preview, deploy to Cloudflare" width="1200" height="748" loading="lazy" style="width:100%;border-radius:var(--radius);border:1px solid var(--border);">
         </div>
 
         <div class="project-brief">
@@ -511,8 +529,8 @@
         </div>
 
         <div class="proj-links">
-          <a href="https://github.com/mansoor-mamnoon/edge-deployer" class="btn btn-primary" target="_blank" rel="noopener">GitHub ↗</a>
-          <a href="https://github.com/mansoor-mamnoon/edge-deployer#readme" class="btn" target="_blank" rel="noopener">Design Notes ↗</a>
+          <a href="https://github.com/mansoor-mamnoon/edge-deployer" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Edge Deployer source on GitHub">GitHub ↗</a>
+          <a href="https://github.com/mansoor-mamnoon/edge-deployer#readme" class="btn" target="_blank" rel="noopener" aria-label="Edge Deployer design notes on GitHub">Design Notes ↗</a>
         </div>
       </div>
 
@@ -522,8 +540,8 @@
         <p class="proj-panel-summary">Framework for training, evaluating, and stress-testing offline RL policies from static logs under safety constraints — with tools to answer whether a policy is actually safe to deploy.</p>
 
         <div class="proj-demo" style="display:flex;gap:var(--s3);flex-wrap:wrap;">
-          <img src="assets/offline_rl_traffic.gif" alt="Traffic routing policy: safe vs. random baseline" loading="lazy" style="flex:1;min-width:240px;border-radius:4px;border:1px solid var(--border);">
-          <img src="assets/offline_rl_diagnostics.gif" alt="Dataset diagnostics: coverage, OOD risk, entropy" loading="lazy" style="flex:1;min-width:240px;border-radius:4px;border:1px solid var(--border);">
+          <img src="assets/offline_rl_traffic.gif" alt="Traffic routing policy: safe vs. random baseline" width="600" height="180" loading="lazy" style="flex:1;min-width:240px;border-radius:var(--radius);border:1px solid var(--border);">
+          <img src="assets/offline_rl_diagnostics.gif" alt="Dataset diagnostics: coverage, OOD risk, entropy" width="560" height="320" loading="lazy" style="flex:1;min-width:240px;border-radius:var(--radius);border:1px solid var(--border);">
         </div>
 
         <div class="project-brief">
@@ -589,8 +607,8 @@
         </div>
 
         <div class="proj-links">
-          <a href="https://github.com/mansoor-mamnoon/offline-rl-agent" class="btn btn-primary" target="_blank" rel="noopener">GitHub ↗</a>
-          <a href="https://github.com/mansoor-mamnoon/offline-rl-agent#readme" class="btn" target="_blank" rel="noopener">Design Notes ↗</a>
+          <a href="https://github.com/mansoor-mamnoon/offline-rl-agent" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Offline RL Agent source on GitHub">GitHub ↗</a>
+          <a href="https://github.com/mansoor-mamnoon/offline-rl-agent#readme" class="btn" target="_blank" rel="noopener" aria-label="Offline RL Agent design notes on GitHub">Design Notes ↗</a>
         </div>
       </div>
 

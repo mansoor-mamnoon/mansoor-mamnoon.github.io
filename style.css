@@ -70,7 +70,8 @@
     --nav-h: 56px;
     --max-w: 1080px;
     --content-px: clamp(1rem, 4vw, 2.5rem);
-    --radius: 4px;
+    --radius: 4px;      /* cards, containers, panels, media */
+    --radius-sm: 2px;   /* chips, badges, pills, small controls */
 
     /* Transitions */
     --t: 120ms ease;
@@ -184,7 +185,7 @@
 
   ::-webkit-scrollbar { width: 5px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
-  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: var(--radius-sm); }
   ::-webkit-scrollbar-thumb:hover { background: var(--muted-dim); }
 }
 
@@ -273,7 +274,7 @@
     color: var(--text);
     border: 1px solid var(--border);
     padding: 0.28rem 0.65rem;
-    border-radius: 3px;
+    border-radius: var(--radius-sm);
     transition: border-color var(--t), color var(--t);
     text-decoration: none;
     white-space: nowrap;
@@ -307,7 +308,7 @@
     color: var(--muted-dim);
     border: 1px solid var(--border-dim);
     padding: 0.18rem 0.45rem;
-    border-radius: 3px;
+    border-radius: var(--radius-sm);
     letter-spacing: 0.04em;
     opacity: 0.45;
     transition: color var(--t), border-color var(--t), opacity var(--t);
@@ -473,7 +474,7 @@
     font-size: 0.62rem;
     letter-spacing: 0.05em;
     padding: 0.18rem 0.5rem;
-    border-radius: 2px;
+    border-radius: var(--radius-sm);
     white-space: nowrap;
     background: transparent;
     border: 1px solid var(--border);
@@ -598,7 +599,7 @@
     color: var(--muted);
     padding: 0.3rem 0.7rem;
     border: 1px solid var(--border-dim);
-    border-radius: 2px;
+    border-radius: var(--radius-sm);
     transition: border-color var(--t), color var(--t);
   }
 
@@ -781,7 +782,7 @@
   .system-logo {
     width: 26px;
     height: 26px;
-    border-radius: 4px;
+    border-radius: var(--radius);
     object-fit: cover;
     flex-shrink: 0;
     border: 1px solid var(--border-dim);
@@ -790,7 +791,7 @@
   .proj-logo {
     width: 20px;
     height: 20px;
-    border-radius: 3px;
+    border-radius: var(--radius-sm);
     object-fit: cover;
     flex-shrink: 0;
     border: 1px solid var(--border-dim);
@@ -1135,7 +1136,7 @@
     background: var(--metric-dim);
     padding: 0.28rem 0.7rem;
     border: 1px solid color-mix(in srgb, var(--metric) 20%, transparent);
-    border-radius: 2px;
+    border-radius: var(--radius-sm);
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
@@ -1161,7 +1162,7 @@
     background: transparent;
     border: 1px solid var(--border);
     padding: 0.18rem 0.55rem;
-    border-radius: 2px;
+    border-radius: var(--radius-sm);
   }
 
   .proj-links {
@@ -1239,7 +1240,7 @@
     cursor: pointer;
     background: transparent;
     transition: all var(--t);
-    border-radius: 2px;
+    border-radius: var(--radius-sm);
   }
 
   .filter-btn:hover, .filter-btn.active {
@@ -1686,7 +1687,7 @@
     max-width: 500px;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 6px;
+    border-radius: var(--radius);
     overflow: hidden;
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
   }
@@ -1701,7 +1702,7 @@
 
   .cmd-prompt { font-family: var(--font-mono); font-size: 0.9rem; color: var(--accent); flex-shrink: 0; }
 
-  .cmd-input {
+  #cmd-input {
     flex: 1;
     background: none;
     border: none;
@@ -1749,7 +1750,7 @@
   .cmd-hint kbd {
     background: var(--surface-soft);
     border: 1px solid var(--border);
-    border-radius: 2px;
+    border-radius: var(--radius-sm);
     padding: 0.08rem 0.3rem;
     font-family: var(--font-mono);
     font-size: 0.6rem;
@@ -1768,7 +1769,7 @@
     font-family: var(--font-mono);
     font-size: 0.72rem;
     padding: var(--s2) var(--s5);
-    border-radius: 2px;
+    border-radius: var(--radius-sm);
     opacity: 0;
     transition: opacity var(--t-slow), transform var(--t-slow);
     pointer-events: none;

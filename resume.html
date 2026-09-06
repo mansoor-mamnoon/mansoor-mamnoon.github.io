@@ -4,20 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Resume — Mansoor Mamnoon | Berkeley EECS Honors · Databricks · Amazon</title>
-  <meta name="description" content="Resume of Mansoor Mamnoon — Berkeley EECS Honors, Databricks SWE Intern (Traffic Platform, GCP network infra), Amazon SDE Intern. Systems engineer in C++, Go, Rust.">
+  <meta name="description" content="Resume of Mansoor Mamnoon — Berkeley EECS Honors, former Databricks & Amazon SWE intern. Systems engineer in C++, Go, Rust, eBPF, and distributed infra.">
   <meta name="robots" content="index, follow">
   <meta property="og:title"       content="Resume — Mansoor Mamnoon | Berkeley EECS Honors">
-  <meta property="og:description" content="Berkeley EECS Honors, Class of 2027. Databricks SWE Intern, Traffic Platform. Former Amazon SDE Intern. C++, Go, Rust, TypeScript.">
+  <meta property="og:description" content="Berkeley EECS Honors, Class of 2027. Former Databricks SWE Intern, Traffic Platform. Former Amazon SDE Intern. C++, Go, Rust, TypeScript.">
   <meta property="og:image"       content="https://mansoor-mamnoon.github.io/preview.webp">
   <meta property="og:url"         content="https://mansoor-mamnoon.github.io/resume.html">
   <meta property="og:type"        content="website">
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="Resume — Mansoor Mamnoon | Berkeley EECS">
-  <meta name="twitter:description" content="Berkeley EECS Honors, Databricks SWE Intern (Traffic Platform), former Amazon SDE Intern. C++, Go, Rust systems engineer.">
+  <meta name="twitter:description" content="Berkeley EECS Honors, former Databricks SWE Intern (Traffic Platform), former Amazon SDE Intern. C++, Go, Rust systems engineer.">
   <meta name="twitter:image"       content="https://mansoor-mamnoon.github.io/preview.webp">
   <meta name="keywords" content="Mansoor Mamnoon resume, Berkeley EECS, software engineering intern, systems engineer, C++, Go, Rust, eBPF, Linux networking, vxlan-tracer, Python, TypeScript, distributed systems, Databricks, Amazon, new grad 2027, computer science portfolio, matching engine, LLM security">
   <link rel="canonical" href="https://mansoor-mamnoon.github.io/resume.html">
   <link rel="alternate" type="text/plain" title="LLM-readable profile" href="https://mansoor-mamnoon.github.io/llms.txt">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://mansoor-mamnoon.github.io/#person",
+    "name": "Mansoor Mamnoon",
+    "url": "https://mansoor-mamnoon.github.io/",
+    "image": "https://mansoor-mamnoon.github.io/assets/Mansoor_Mamnoon_Headshot.jpeg",
+    "email": "mailto:mansoormmamnoon@berkeley.edu",
+    "description": "UC Berkeley EECS Honors student (Class of 2027), former Databricks SWE Intern on Traffic Platform (GCP network control plane, Go, Rust) and former Amazon SDE Intern. Builds distributed systems, low-latency C++ infrastructure, and ML security tooling.",
+    "jobTitle": "Computer Science Student",
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of California, Berkeley" },
+    "sameAs": [
+      "https://linkedin.com/in/mansoormamnoon",
+      "https://github.com/mansoor-mamnoon"
+    ],
+    "knowsAbout": [
+      "Distributed Systems", "C++", "Go", "Rust", "Low-Latency Systems",
+      "Backend Infrastructure", "ML Security", "High-Frequency Trading Systems",
+      "Networking", "Database Internals", "Compiler Design",
+      "Secure AI Tooling", "LLM Agent Security"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://mansoor-mamnoon.github.io/"},
+    {"@type":"ListItem","position":2,"name":"Resume","item":"https://mansoor-mamnoon.github.io/resume.html"}
+  ]}
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +57,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
   <script>(function(){var t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();</script>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BWCTKVQ3"></script>
@@ -62,8 +94,8 @@
       <div class="nav-links">
         <a href="projects.html" class="nav-link">Projects</a>
         <a href="experience.html" class="nav-link">Experience</a>
-
-        <a href="about.html" class="nav-link">Profile</a>
+        <a href="notes.html" class="nav-link">Notes</a>
+        <a href="about.html" class="nav-link">About</a>
       </div>
       <div class="nav-actions">
         <a href="resume.html" class="nav-resume active">Resume</a>
@@ -76,8 +108,8 @@
   <div id="nav-drawer" class="nav-drawer">
     <a href="projects.html" class="nav-link">Projects</a>
     <a href="experience.html" class="nav-link">Experience</a>
-
-    <a href="about.html" class="nav-link">Profile</a>
+    <a href="notes.html" class="nav-link">Notes</a>
+    <a href="about.html" class="nav-link">About</a>
     <a href="resume.html" class="nav-resume">Resume</a>
   </div>
 </header>
@@ -126,14 +158,14 @@
         <div class="resume-row">
           <div class="resume-row-head">
             <span class="resume-org">Databricks</span>
-            <span class="resume-date">May 2026 – Present · Bellevue, WA</span>
+            <span class="resume-date">May – Aug 2026 · Bellevue, WA</span>
           </div>
           <p class="resume-role">Software Engineering Intern — Traffic Platform</p>
           <ul class="resume-bullets">
-            <li>Developing dynamic network interface attachment for GCP-provisioned VMs, enabling transparent enforcement of customer network isolation guarantees across multi-tenant cloud infrastructure.</li>
-            <li>Implementing cloud provider integrations within an internal network control plane, interfacing with service network layers to maintain workload boundary semantics at scale.</li>
+            <li>Developed dynamic network interface attachment for GCP-provisioned VMs, enabling transparent enforcement of customer network isolation guarantees across multi-tenant cloud infrastructure.</li>
+            <li>Implemented cloud provider integrations within an internal network control plane, interfacing with service network layers to maintain workload boundary semantics at scale.</li>
             <li>Designed and validated a proof-of-concept by manually provisioning and configuring VMs end-to-end, confirming architectural feasibility before full implementation.</li>
-            <li>Collaborating with senior infrastructure engineers on architecture design, presenting implementation plans for review prior to development.</li>
+            <li>Collaborated with senior infrastructure engineers on architecture design, presenting implementation plans for review prior to development.</li>
           </ul>
           <p class="resume-tech">Go · Rust · GCP · Network Control Plane · Virtual Machines · Multi-tenant Infrastructure</p>
         </div>
@@ -145,9 +177,9 @@
           </div>
           <p class="resume-role">Undergraduate Researcher</p>
           <ul class="resume-bullets">
-            <li>Working with postdoctoral researchers on extensions to Robo-DM, a data management toolkit for large-scale robot learning datasets (affiliated with UC Berkeley AUTOLab / BAIR).</li>
-            <li>Exploring efficient dataset compression, retrieval, and integration with ML training pipelines.</li>
-            <li>Applying prior experience in real-time event pipelines to robotics data loading and systems optimization.</li>
+            <li>Worked with postdoctoral researchers on extensions to Robo-DM, a data management toolkit for large-scale robot learning datasets (affiliated with UC Berkeley AUTOLab / BAIR).</li>
+            <li>Explored efficient dataset compression, retrieval, and integration with ML training pipelines.</li>
+            <li>Applied prior experience in real-time event pipelines to robotics data loading and systems optimization.</li>
           </ul>
           <p class="resume-tech">Python · PyTorch · Data Engineering · Robot Learning</p>
         </div>
@@ -177,12 +209,8 @@
           <p class="resume-role">Software Engineering Intern</p>
           <ul class="resume-bullets">
             <li>Engineered a scraping and ranking system using Python, Beautiful Soup, and pandas, optimized via custom trie-based prefix matching and vectorized scoring — reducing runtime by 5× across 200+ client profiles.</li>
-            <li>Designed a weighted lead ranking algorithm scoring prospects on post frequency, keyword density, and engagement signals, enabling automated prioritization in outreach workflows.</li>
-            <li>A/B tested targeted outreach across Apollo CRM, LinkedIn, and email, improving contact conversion by 25% and pipelining feedback into internal analytics dashboards.</li>
-            <li>Built a reusable data ingestion module and led documentation and interface design for intern handoff.</li>
-            <li>Delivered live technical demos at SF Tech Week to 40+ clients, collecting real-time user feedback.</li>
           </ul>
-          <p class="resume-tech">Python · Beautiful Soup · pandas · Apollo CRM · Data Pipelines</p>
+          <p class="resume-tech">Python · Beautiful Soup · pandas · Data Pipelines</p>
         </div>
 
       </section>
@@ -200,7 +228,7 @@
           <ul class="resume-bullets">
             <li>Built an eBPF-based CLI in Go + C that diagnoses silent VXLAN packet-drop bugs caused by MTU mismatches — a class of issue that is invisible to standard tooling and common in k3s/Flannel and Calico deployments.</li>
             <li>Implemented 4 BPF programs (TC sched_cls ingress/egress + kprobes on <code>icmp_rcv</code> and <code>ip_do_fragment</code>) producing 6 diagnostic verdicts; TC attach/detach is identity-verified and rollback-safe on error.</li>
-            <li>Shipped <code>interfaces</code> and <code>collect-environment</code> subcommands; packaged arm64 + amd64 binaries; 41/41 qualification gates PASS on Linux 5.15 kernel (Ubuntu 22.04).</li>
+            <li>Shipped <code>interfaces</code> and <code>collect-environment</code> subcommands; packaged arm64 + amd64 binaries; 6/6 verdict scenarios and 20/20 TC-lifecycle coexistence cases pass on Linux 5.15 (Ubuntu 22.04).</li>
           </ul>
           <p class="resume-tech">Go · C · eBPF · Linux TC · kprobes · cilium/ebpf · netlink</p>
         </div>
@@ -212,9 +240,9 @@
           </div>
           <p class="resume-role">MCP Security Proxy — Prompt Injection Defense</p>
           <ul class="resume-bullets">
-            <li>Built a four-layer signal pipeline: heuristic denylist, hashed feature vectors for semantic drift detection (no external model, sub-ms), taint-aware capability gating, and document instruction density scoring.</li>
-            <li>Self-play red-team pipeline generates 500+ adaptive attacks across 7 classes via a 3-round mutation loop; reduced attack success rate from 100% to 16% on local eval suite of 4,200+ cases (vs. no-filter baseline).</li>
-            <li>Threshold calibration via FPR-constrained sweep holds false positive rate to 8.3%. 783 tests. p95 latency &lt; 1ms.</li>
+            <li>Built a seven-layer enforcement pipeline (allowlist, lookalike detection, arg injection scan, arg sanitization, secret-flow guard, taint-aware write gating, output injection scan) in a real async stdio MCP proxy at sub-ms latency with no external model calls.</li>
+            <li>Information-flow control with source-level taint labels categorically blocks untrusted retrieved content from authorizing write-side-effect tools regardless of detection score — cutting attack success rate from 100% to 48% overall on 4,200+ eval cases, and from 73% to 0% on capability-exploiting attacks.</li>
+            <li>0.6% false-positive rate. 0.16 ms average latency. 839 tests across unit + integration suites; validated against real MCP servers (filesystem, git, SQLite) across 26 scenarios. <code>pip install llmfirewall</code>.</li>
           </ul>
           <p class="resume-tech">Python · FastAPI · MCP Protocol · NumPy · pytest</p>
         </div>
@@ -237,13 +265,13 @@
             <span class="resume-org">Offline RL Agent</span>
             <span class="resume-date">May – Jun 2025</span>
           </div>
-          <p class="resume-role">Custom Reinforcement Learning System for Latency-Constrained Deployment</p>
+          <p class="resume-role">Offline Reinforcement Learning Framework for Safety-Constrained Deployment</p>
           <ul class="resume-bullets">
-            <li>Developed a custom Gym environment with dual observation channels and delayed reward functions, simulating high-dimensional control tasks with ~10⁵ state transitions per training run.</li>
-            <li>Implemented an offline RL training pipeline in PyTorch, featuring a prioritized replay buffer (α=0.6, β=0.4), batch reward normalization, and dynamic ε-greedy exploration — achieving ~92% average reward recovery from expert trajectories.</li>
-            <li>Benchmarked Conservative Q-Learning (CQL) and DQN across 8 random seeds, analyzing variance, convergence speed, and sample efficiency; achieved ~30% lower regret compared to baseline DQN under identical rollout constraints.</li>
+            <li>Built a 6-algorithm offline RL framework (BC, CQL, IQL, TD3+BC, Decision Transformer, AWAC) with a 32-dimensional traffic routing simulator (SLO constraints, incidents, diurnal patterns) and a hospital treatment simulator.</li>
+            <li>Implemented dataset diagnostics (coverage score, behavior entropy, OOD risk), three offline policy evaluation estimators (FQE, Weighted IS, Doubly Robust) with bootstrap confidence intervals, a policy shield, and a causal failure explorer.</li>
+            <li>CQL achieved ~72 return vs. ~51 behavioral baseline with 3% SLO violations (vs. 8% behavioral); bootstrap CI narrowed the FQE estimate to [65.1, 74.5] across 3 seeds / 50 epochs. Reproducible via <code>make reproduce-small</code>.</li>
           </ul>
-          <p class="resume-tech">PyTorch · OpenAI Gym · NumPy · TensorBoard</p>
+          <p class="resume-tech">Python · PyTorch · NumPy · Streamlit · Matplotlib · pytest</p>
         </div>
 
         <div class="resume-row">
@@ -253,11 +281,11 @@
           </div>
           <p class="resume-role">Multi-Cloud Serverless IDE</p>
           <ul class="resume-bullets">
-            <li>Engineered a desktop IDE using Electron, React, and TypeScript to deploy serverless APIs across AWS Lambda@Edge, Cloudflare Workers, and Vercel Functions via one-click multi-cloud workflows.</li>
-            <li>Integrated infrastructure-as-code (IaC) generation using Terraform, dynamic configuration, and live preview via Monaco Editor — enabling production-grade deployments with zero CLI interaction.</li>
-            <li>Designed a fully offline-compatible build pipeline, benchmarked to support 1K+ concurrent requests/sec, simulating cold-start behavior and cross-cloud latency tradeoffs in edge environments.</li>
+            <li>Engineered a native desktop IDE (Electron, React 19, TypeScript) to deploy serverless APIs across 6 providers — Cloudflare Workers, AWS Lambda, Vercel, Netlify, Fly.io, Railway — behind a shared 7-method deployer interface, with one-click deploy, rollback, and drift detection.</li>
+            <li>Built a live edge runtime simulator (preview with no cloud account), IaC export (Pulumi, Terraform, Wrangler, Docker+K8s), and a sandboxed <code>vm.Context</code> plugin system with explicit permission manifests and 5s execution timeouts.</li>
+            <li>AES-256-GCM secrets vault (PBKDF2, 100k iterations) that excludes credentials at the TypeScript type level; cross-platform binaries via GitHub Actions matrix builds; 85 tests across 6 suites.</li>
           </ul>
-          <p class="resume-tech">Electron · React · TypeScript · Pulumi · Terraform · Monaco Editor</p>
+          <p class="resume-tech">Electron · React 19 · TypeScript · Pulumi · Monaco Editor · Cloudflare / AWS / Vercel APIs</p>
         </div>
 
       </section>
