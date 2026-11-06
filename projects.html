@@ -3,125 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projects — Mansoor Mamnoon | Systems & Security Engineering</title>
-  <meta name="description" content="Systems projects by Mansoor Mamnoon: vxlan-tracer (eBPF), C++20 matching engine (20.7M msgs/sec), LLMFirewall MCP security proxy, and more.">
+  <title>Projects | Mansoor Mamnoon</title>
+  <meta name="description" content="Projects by Mansoor Mamnoon: vxlan-tracer (eBPF), LLMFirewall (MCP security proxy), a C++20 matching engine, Edge Deployer, and an offline RL framework.">
   <meta name="robots" content="index, follow">
-  <meta property="og:title"       content="Projects — Mansoor Mamnoon | Systems & Security Engineering">
-  <meta property="og:description" content="vxlan-tracer eBPF VXLAN diagnostic · C++20 matching engine 20.7M msgs/sec · LLMFirewall MCP proxy (0% ASR gate, 839 tests) · Edge Deployer (6 providers) — by Mansoor Mamnoon.">
-  <meta property="og:image"       content="https://mansoor-mamnoon.github.io/preview.webp">
-  <meta property="og:url"         content="https://mansoor-mamnoon.github.io/projects.html">
-  <meta property="og:type"        content="website">
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Projects — Mansoor Mamnoon | Systems & Security Engineering">
-  <meta name="twitter:description" content="vxlan-tracer eBPF VXLAN diagnostic (4 BPF programs) · C++20 matching engine 20.7M msgs/sec · LLMFirewall 0% ASR gate · Offline RL Agent.">
-  <meta name="twitter:image"       content="https://mansoor-mamnoon.github.io/preview.webp">
-  <meta name="keywords" content="vxlan-tracer, eBPF, VXLAN MTU, Linux networking, TC sched_cls, kprobe, LLMFirewall, prompt injection defense, MCP security proxy, LLM agent security, C++ matching engine, limit order book, HFT, high frequency trading, low latency systems, edge deployer, serverless deployment, Cloudflare Workers, AWS Lambda, offline reinforcement learning, CQL, IQL, AWAC, PyTorch, Mansoor Mamnoon, Berkeley EECS, systems engineer portfolio">
+  <meta property="og:title" content="Projects | Mansoor Mamnoon">
+  <meta property="og:description" content="vxlan-tracer, LLMFirewall, a C++20 matching engine, Edge Deployer, and an offline RL framework.">
+  <meta property="og:image" content="https://mansoor-mamnoon.github.io/preview.webp">
+  <meta property="og:url" content="https://mansoor-mamnoon.github.io/projects.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects | Mansoor Mamnoon">
+  <meta name="twitter:description" content="vxlan-tracer, LLMFirewall, a C++20 matching engine, Edge Deployer, and an offline RL framework.">
+  <meta name="twitter:image" content="https://mansoor-mamnoon.github.io/preview.webp">
+  <meta name="keywords" content="vxlan-tracer, eBPF, VXLAN MTU, Linux networking, LLMFirewall, prompt injection defense, MCP security proxy, C++ matching engine, limit order book, edge deployer, offline reinforcement learning, Mansoor Mamnoon">
   <link rel="canonical" href="https://mansoor-mamnoon.github.io/projects.html">
   <link rel="alternate" type="text/plain" title="LLM-readable profile" href="https://mansoor-mamnoon.github.io/llms.txt">
-
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
     {"@type":"ListItem","position":1,"name":"Home","item":"https://mansoor-mamnoon.github.io/"},
     {"@type":"ListItem","position":2,"name":"Projects","item":"https://mansoor-mamnoon.github.io/projects.html"}
   ]}
   </script>
-
-
-  <script type="application/ld+json"> 
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareSourceCode",
-    "name": "LLMFirewall",
-    "description": "MCP security proxy for tool-using LLM agents. Seven-layer enforcement pipeline; 48% ASR vs 100% no-defense; 0% ASR on tool-side-effect attacks with gate ablation. 839 tests, 0.16ms avg latency. pip install llmfirewall.",
-    "codeRepository": "https://github.com/mansoor-mamnoon/prompt-injection-lab",
-    "url": "https://mansoor-mamnoon.github.io/projects.html#llmfirewall",
-    "datePublished": "2026-05",
-    "programmingLanguage": ["Python"],
-    "author": {
-      "@type": "Person",
-      "name": "Mansoor Mamnoon",
-      "@id": "https://mansoor-mamnoon.github.io/#person"
-    },
-    "keywords": ["LLM security", "prompt injection", "MCP protocol", "AI agent security"]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareSourceCode",
-    "name": "C++20 Limit Order Book — Matching Engine",
-    "description": "Exchange-style matching engine sustaining 20.7M messages/sec at p50 = 0.04 µs on a synthetic local benchmark. Relevant to high-frequency trading and quantitative systems.",
-    "codeRepository": "https://github.com/mansoor-mamnoon/limit-order-book",
-    "url": "https://mansoor-mamnoon.github.io/projects.html#orderbook",
-    "datePublished": "2025-08",
-    "programmingLanguage": ["C++", "Python"],
-    "author": {
-      "@type": "Person",
-      "name": "Mansoor Mamnoon",
-      "@id": "https://mansoor-mamnoon.github.io/#person"
-    },
-    "keywords": ["C++20", "matching engine", "limit order book", "high-frequency trading", "HFT", "low-latency systems", "quantitative engineering"]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareSourceCode",
-    "name": "Edge Deployer — Serverless IDE",
-    "description": "Electron desktop IDE for deploying serverless APIs to 6 cloud providers (Cloudflare Workers, AWS Lambda, Vercel, Netlify, Fly.io, Railway). AI assistant (Claude API), encrypted vault, load tester, 85 tests.",
-    "codeRepository": "https://github.com/mansoor-mamnoon/edge-deployer",
-    "url": "https://mansoor-mamnoon.github.io/projects.html#edgedeployer",
-    "datePublished": "2025-05",
-    "programmingLanguage": ["TypeScript", "JavaScript"],
-    "author": {
-      "@type": "Person",
-      "name": "Mansoor Mamnoon",
-      "@id": "https://mansoor-mamnoon.github.io/#person"
-    },
-    "keywords": ["Electron", "serverless", "Cloudflare Workers", "AWS Lambda", "multi-cloud", "developer tooling", "edge computing"]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareSourceCode",
-    "name": "vxlan-tracer",
-    "description": "eBPF diagnostic tool for VXLAN MTU blackholes. Attaches 4 BPF programs (TC sched_cls + kprobes on ip_do_fragment/icmp_rcv) and returns one of 6 verdicts in a single 5-60s run. TC lifecycle safe: collision check, identity-verified cleanup, idempotent Close(). 20/20 TC coexistence cases pass on Linux 5.15.",
-    "codeRepository": "https://github.com/mansoor-mamnoon/vxlan-tracer",
-    "url": "https://mansoor-mamnoon.github.io/projects.html#vxlantracer",
-    "datePublished": "2026-06",
-    "programmingLanguage": ["Go", "C"],
-    "author": {
-      "@type": "Person",
-      "name": "Mansoor Mamnoon",
-      "@id": "https://mansoor-mamnoon.github.io/#person"
-    },
-    "keywords": ["eBPF", "VXLAN", "Linux networking", "TC sched_cls", "kprobe", "MTU blackhole", "network diagnostics", "Go", "BTF CO-RE"]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareSourceCode",
-    "name": "Offline RL Agent",
-    "description": "Offline reinforcement learning framework with 6 algorithms (BC, CQL, IQL, TD3+BC, DT, AWAC), traffic routing simulator, dataset diagnostics, OPE estimators with bootstrap CIs, policy shield, and causal failure explorer.",
-    "codeRepository": "https://github.com/mansoor-mamnoon/offline-rl-agent",
-    "url": "https://mansoor-mamnoon.github.io/projects.html#offlinerl",
-    "datePublished": "2025-06",
-    "programmingLanguage": ["Python"],
-    "author": {
-      "@type": "Person",
-      "name": "Mansoor Mamnoon",
-      "@id": "https://mansoor-mamnoon.github.io/#person"
-    },
-    "keywords": ["offline reinforcement learning", "CQL", "IQL", "AWAC", "PyTorch", "safe RL", "offline policy evaluation", "OPE"]
-  }
-]
+  <script type="application/ld+json">
+  [
+    {"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"LLMFirewall","description":"MCP security proxy for tool-using LLM agents.","codeRepository":"https://github.com/mansoor-mamnoon/prompt-injection-lab","programmingLanguage":["Python"],"author":{"@id":"https://mansoor-mamnoon.github.io/#person"}},
+    {"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"C++20 Limit Order Book","description":"Exchange-style matching engine, 20.7M messages/sec at p50 = 0.04 us on a synthetic benchmark.","codeRepository":"https://github.com/mansoor-mamnoon/limit-order-book","programmingLanguage":["C++","Python"],"author":{"@id":"https://mansoor-mamnoon.github.io/#person"}},
+    {"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"vxlan-tracer","description":"eBPF diagnostic tool for VXLAN MTU blackholes.","codeRepository":"https://github.com/mansoor-mamnoon/vxlan-tracer","programmingLanguage":["Go","C"],"author":{"@id":"https://mansoor-mamnoon.github.io/#person"}},
+    {"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Edge Deployer","description":"Electron desktop IDE for deploying serverless functions to 6 cloud providers.","codeRepository":"https://github.com/mansoor-mamnoon/edge-deployer","programmingLanguage":["TypeScript"],"author":{"@id":"https://mansoor-mamnoon.github.io/#person"}},
+    {"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Offline RL Agent","description":"Offline reinforcement learning framework with 6 algorithms, safety constraints, and OPE estimators.","codeRepository":"https://github.com/mansoor-mamnoon/offline-rl-agent","programmingLanguage":["Python"],"author":{"@id":"https://mansoor-mamnoon.github.io/#person"}}
+  ]
   </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
-  <script>(function(){var t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();</script>
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BWCTKVQ3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -132,504 +47,103 @@
 </head>
 <body>
 
-<div id="scroll-progress" aria-hidden="true"></div>
-
-<div id="cmd-overlay" class="cmd-overlay" hidden role="dialog" aria-modal="true" aria-label="Command palette">
-  <div class="cmd-box">
-    <div class="cmd-input-wrap">
-      <span class="cmd-prompt" aria-hidden="true">›</span>
-      <input id="cmd-input" type="text" placeholder="Type a command..." autocomplete="off" spellcheck="false" aria-label="Command search">
-    </div>
-    <ul id="cmd-list" class="cmd-list" role="listbox"></ul>
-    <div class="cmd-footer" aria-hidden="true">
-      <span class="cmd-hint"><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
-      <span class="cmd-hint"><kbd>↵</kbd> select</span>
-      <span class="cmd-hint"><kbd>esc</kbd> close</span>
-    </div>
-  </div>
-</div>
-
-<header>
-  <nav class="nav" aria-label="Site navigation">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="Mansoor Mamnoon — Home">Mansoor Mamnoon</a>
-      <div class="nav-links">
-        <a href="projects.html" class="nav-link active">Projects</a>
-        <a href="experience.html" class="nav-link">Experience</a>
-        <a href="notes.html" class="nav-link">Notes</a>
-        <a href="about.html" class="nav-link">About</a>
-      </div>
-      <div class="nav-actions">
-        <a href="resume.html" class="nav-resume">Resume</a>
-        <button id="cmd-hint" class="nav-icon-btn nav-cmd-subtle" title="Command palette (⌘K)">⌘K</button>
-        <button id="theme-toggle" class="nav-icon-btn" aria-label="Toggle theme">◐</button>
-      </div>
-      <button id="nav-hamburger" class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">☰</button>
-    </div>
+<header class="site-header">
+  <a class="site-name" href="index.html">Mansoor Mamnoon</a>
+  <nav aria-label="Site">
+    <a href="projects.html" aria-current="page">Projects</a>
+    <a href="experience.html">Experience</a>
+    <a href="notes.html">Notes</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
   </nav>
-  <div id="nav-drawer" class="nav-drawer">
-    <a href="projects.html" class="nav-link">Projects</a>
-    <a href="experience.html" class="nav-link">Experience</a>
-    <a href="notes.html" class="nav-link">Notes</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="resume.html" class="nav-resume">Resume</a>
-  </div>
 </header>
 
 <main>
-  <h1 class="sr-only">Projects — Mansoor Mamnoon</h1>
-  <div class="work-layout">
+  <h1>Projects</h1>
 
-    <!-- Sidebar: Project Index -->
-    <aside class="work-sidebar" aria-label="Project index">
-      <div class="section-label">Project Index</div>
+  <p>Five things I've built, newest first: <a href="#vxlantracer">vxlan-tracer</a>, <a href="#llmfirewall">LLMFirewall</a>, <a href="#orderbook">a C++20 matching engine</a>, <a href="#offlinerl">an offline RL framework</a>, and <a href="#edgedeployer">Edge Deployer</a>. All of the code is on <a href="https://github.com/mansoor-mamnoon">GitHub</a>.</p>
 
-      <nav aria-label="Project list">
-        <button class="proj-nav-item" data-project="llmfirewall" aria-controls="llmfirewall">
-          <span class="proj-nav-name">LLMFirewall</span>
-          <span class="proj-nav-type">security · ML systems</span>
-          <span class="proj-nav-metric">0% ASR (gate) · 839 tests</span>
-        </button>
-        <button class="proj-nav-item" data-project="orderbook" aria-controls="orderbook">
-          <span class="proj-nav-name">Limit Order Book</span>
-          <span class="proj-nav-type">performance · C++20</span>
-          <span class="proj-nav-metric">20.7M msg/s · p50 = 0.04 µs</span>
-        </button>
-        <button class="proj-nav-item" data-project="vxlantracer" aria-controls="vxlantracer">
-          <span class="proj-nav-name">vxlan-tracer</span>
-          <span class="proj-nav-type">networking · eBPF · Linux</span>
-          <span class="proj-nav-metric">4 BPF programs · 6 verdicts · TC safe</span>
-        </button>
-        <button class="proj-nav-item" data-project="edgedeployer" aria-controls="edgedeployer">
-          <span class="proj-nav-name">Edge Deployer</span>
-          <span class="proj-nav-type">infra tools · multi-cloud</span>
-          <span class="proj-nav-metric">6 providers · 85 tests · plugin system</span>
-        </button>
-        <button class="proj-nav-item" data-project="offlinerl" aria-controls="offlinerl">
-          <span class="proj-nav-name">Offline RL Agent</span>
-          <span class="proj-nav-type">ML systems · safety</span>
-          <span class="proj-nav-metric">6 algorithms · safety constraints · OPE</span>
-        </button>
-      </nav>
-    </aside>
+  <section class="project" id="vxlantracer">
+    <h2>vxlan-tracer</h2>
+    <p class="meta">Go, eBPF (C), cilium/ebpf, netlink &middot; May&ndash;Jun 2026 &middot; <a href="https://github.com/mansoor-mamnoon/vxlan-tracer">GitHub</a></p>
 
-    <!-- Detail Panel -->
-    <section class="work-detail" aria-live="polite">
+    <p>When a VXLAN overlay's MTU is set wrong, the network fails in a confusing way: pings and small requests work, large payloads stall, and nothing shows up in any log. It happens often enough in k3s/Flannel and Calico setups that I wanted a tool that would just say what's wrong.</p>
 
-      <!-- LLMFirewall -->
-      <div class="proj-panel" id="llmfirewall" role="region" aria-label="LLMFirewall project detail">
-        <h2 class="proj-panel-title">LLMFirewall</h2>
-        <p class="proj-panel-summary">Real async stdio MCP security proxy enforcing taint-aware least privilege for tool-using LLM agents — installable via <code>pip install llmfirewall</code>.</p>
+    <p>vxlan-tracer attaches four BPF programs at the same time: TC hooks on overlay egress and underlay ingress, and kprobes on <code>ip_do_fragment</code> and <code>icmp_rcv</code>. After a 5 to 60 second run it combines their counters into one of six verdicts, such as <code>VXLAN_FRAGMENTATION_OBSERVED</code>, <code>PTB_SUPPRESSED</code>, or <code>VXLAN_MTU_OK</code>. It doesn't need a kernel module or any config change, and it doesn't disrupt traffic.</p>
 
-        <div class="proj-demo">
-          <img src="assets/llmfirewall_demo.gif" alt="LLMFirewall demo: prompt injection blocked in real time" width="960" height="560" loading="lazy" style="width:100%;border-radius:var(--radius);border:1px solid var(--border);">
-        </div>
+    <figure>
+      <img src="assets/vxlan_tracer_demo.gif" alt="Terminal recording: vxlan-tracer discovers interfaces and reports VXLAN_FRAGMENTATION_OBSERVED" width="944" height="647" loading="lazy">
+      <figcaption>Finding the overlay and underlay interfaces, then a run that ends in a fragmentation verdict.</figcaption>
+    </figure>
 
-        <div class="project-brief">
-          <div>
-            <span class="brief-label">Problem</span>
-            <p>Tool-using LLM agents are vulnerable to prompt injection through malicious tool outputs and retrieved documents. Regex denylists are enumerable. Detection alone fails on RAG attacks where plausible-sounding documents instruct the agent to call a write tool — the agent complies because no suspicious keywords are present.</p>
-          </div>
-          <div>
-            <span class="brief-label">System</span>
-            <p>Seven-layer enforcement pipeline in a real async stdio MCP proxy: allowlist → lookalike detection → arg injection scan → arg sanitization → secret-flow guard → taint-aware write gating → output injection scan. Cross-turn taint propagation via n-gram fingerprinting blocks relay attacks. Tested end-to-end against real MCP servers (filesystem, git, SQLite).</p>
-          </div>
-          <div>
-            <span class="brief-label">Proof</span>
-            <p>48% ASR vs 100% no-defense baseline. 0% ASR on tool-side-effect attacks with gate ablation — detection alone achieves 73% on those cases. 0.6% FPR. 0.16ms average latency with no external model call. 839 tests across unit + integration suites.</p>
-          </div>
-        </div>
+    <p>Most of the effort went into not breaking the host. Before attaching, it checks for existing TC programs. On exit it removes only the programs it can confirm it installed, and <code>Close()</code> is safe to call twice. It also finds the underlay interface on its own from the VTEP device index, and <code>collect-environment</code> produces a bug-report tarball with no IP addresses, routes, or process lists in it.</p>
 
-        <div class="proj-section">
-          <h4>What I Built</h4>
-          <p>A real async stdio MCP proxy with seven independent enforcement layers:</p>
-          <ul>
-            <li><strong>Allowlist</strong> — any unauthorized tool blocked before upstream is called</li>
-            <li><strong>Lookalike detection</strong> — typosquatted tool names (<code>p0st_slack</code>, <code>post_s1ack</code>)</li>
-            <li><strong>Arg injection scan</strong> — injection payloads embedded in tool arguments</li>
-            <li><strong>Arg sanitization</strong> — external exfiltration URLs, oversized payloads, control chars</li>
-            <li><strong>Secret-flow guard</strong> — API keys and tokens in outgoing arguments</li>
-            <li><strong>Taint-aware write gating</strong> — RAG/tool-output content cannot authorize write-side-effect tools regardless of detection score</li>
-            <li><strong>Output injection scan</strong> — injected instructions in tool responses and resource reads</li>
-          </ul>
-          <p style="margin-top:var(--s3)"><strong>Cross-turn taint propagation:</strong> fingerprints every tool response via word 3-grams. Relay attacks — where a document retrieved on turn 1 is exfiltrated via a write tool on turn 3 — are blocked even when arguments contain zero injection keywords.</p>
-          <p style="margin-top:var(--s3)"><strong>Secret scanner:</strong> named-regex patterns (OpenAI/Anthropic keys, GitHub tokens, AWS keys, JWTs, PEM certs, Stripe/npm/PyPI tokens, .env-style assignments) plus Shannon entropy as a backstop. Secrets redacted from tool outputs before the LLM context sees them.</p>
-          <p style="margin-top:var(--s3)"><strong>Policy language:</strong> YAML DSL with five built-in profiles (permissive/developer/enterprise/strict/research_sandbox). Each tool declares its effect class, which taint sources may authorize it, and which inputs are forbidden. <code>llmfirewall policy check</code> validates; <code>llmfirewall policy explain</code> prints a human-readable breakdown.</p>
-          <p style="margin-top:var(--s3)"><strong>Integration tests:</strong> 26 scenarios running the proxy in front of real MCP server subprocesses (filesystem, git, SQLite) — full round-trip from client to proxy to server and back.</p>
-        </div>
+    <p>All six verdicts reproduce on Linux 5.15, all 20 TC coexistence cases pass (including SIGINT and SIGTERM mid-run), and it builds static binaries for arm64 and amd64.</p>
+  </section>
 
-        <div class="proj-section">
-          <h4>Results</h4>
-          <div class="proj-metrics">
-            <span class="proj-metric">
-              4,200+ evaluation cases
-              <span class="metric-note">5 attack families</span>
-            </span>
-            <span class="proj-metric">
-              48% ASR
-              <span class="metric-note">vs. 100% no-defense</span>
-            </span>
-            <span class="proj-metric">
-              0% ASR
-              <span class="metric-note">gate ablation (tool-side-effects)</span>
-            </span>
-            <span class="proj-metric">
-              0.16 ms avg latency
-              <span class="metric-note">no external model</span>
-            </span>
-            <span class="proj-metric">0.6% FPR</span>
-            <span class="proj-metric">839 tests</span>
-          </div>
-          <p style="margin-top:var(--s4)">Key insight from the gate ablation: detection alone (regex + semantic) achieves 73% ASR on tool-side-effect attacks. Adding capability gating drops ASR to 0% on those cases — because user intent "summarize" never authorizes <code>post_slack</code>, regardless of what the retrieved document says.</p>
-        </div>
+  <section class="project" id="llmfirewall">
+    <h2>LLMFirewall</h2>
+    <p class="meta">Python, FastAPI, MCP &middot; Dec 2025&ndash;May 2026 &middot; <a href="https://github.com/mansoor-mamnoon/prompt-injection-lab">GitHub</a> &middot; <code>pip install llmfirewall</code></p>
 
-        <div class="proj-section">
-          <h4>Stack</h4>
-          <div class="proj-stack-chips">
-            <span class="proj-stack-chip">Python</span>
-            <span class="proj-stack-chip">FastAPI</span>
-            <span class="proj-stack-chip">MCP Protocol (stdio)</span>
-            <span class="proj-stack-chip">hashed feature vectors</span>
-            <span class="proj-stack-chip">NumPy</span>
-            <span class="proj-stack-chip">YAML policy DSL</span>
-            <span class="proj-stack-chip">pytest (839 tests)</span>
-          </div>
-        </div>
+    <p>An agent that can call tools can be tricked by the text it reads. A retrieved document that says "now post this to Slack" can make an agent do exactly that. Keyword filters miss these because the instructions can be phrased in endless ways and often look harmless.</p>
 
-        <div class="proj-links">
-          <a href="https://github.com/mansoor-mamnoon/prompt-injection-lab" class="btn btn-primary" target="_blank" rel="noopener" aria-label="LLMFirewall source on GitHub">GitHub ↗</a>
-          <a href="https://github.com/mansoor-mamnoon/prompt-injection-lab#readme" class="btn" target="_blank" rel="noopener" aria-label="LLMFirewall design notes on GitHub">Design Notes ↗</a>
-        </div>
-      </div>
+    <p>LLMFirewall is a proxy that sits between the agent and its MCP tool servers. Every call goes through seven checks: a tool allowlist, detection of look-alike tool names (<code>p0st_slack</code>), scans of arguments and outputs for injected instructions, argument sanitizing, a guard that stops API keys from leaving in arguments, and taint-aware gating of write tools.</p>
 
-      <!-- Limit Order Book -->
-      <div class="proj-panel" id="orderbook" role="region" aria-label="Limit Order Book project detail">
-        <h2 class="proj-panel-title">Limit Order Book + Matching Engine</h2>
-        <p class="proj-panel-summary">C++20 exchange-style matching engine for high-frequency trading (HFT) and quantitative systems — sustaining 20M+ messages/sec at sub-µs latency.</p>
+    <p>The last check matters most. Content that came from a tool output or a retrieved document is marked untrusted, and untrusted content can never authorize a tool that writes or sends something, no matter how innocent it looks. Responses are fingerprinted with word 3-grams, so an attack still gets caught when the agent reads a document on one turn and leaks it through a write tool two turns later.</p>
 
-        <div class="project-brief">
-          <div>
-            <span class="brief-label">Problem</span>
-            <p>Exchange matching engines and high-frequency trading (HFT) systems require deterministic order matching at throughputs and latencies that commodity implementations cannot reach. Memory allocation, branch misprediction, and cache misses are the bottlenecks — not algorithm complexity.</p>
-          </div>
-          <div>
-            <span class="brief-label">System</span>
-            <p>Price-time priority matching engine with slab allocators, branch elimination, cache-hot pointer layouts, and CPU pinning. Full analytics: VWAP, TWAP, Iceberg, POV with reproducible PnL. Binance US market data connector and TAQ replay.</p>
-          </div>
-          <div>
-            <span class="brief-label">Proof</span>
-            <p>20.7M msgs/sec on a synthetic local benchmark (single-threaded, compiler-optimized). p50 = 0.04 µs, p99 ≈ 1 µs. Hardware spec and benchmark harness in the GitHub README. Crash recovery via snapshot/resume — mid-file restart produces identical fills.</p>
-          </div>
-        </div>
+    <figure>
+      <img src="assets/llmfirewall_demo.gif" alt="Terminal recording: LLMFirewall blocking a prompt-injected tool call" width="960" height="560" loading="lazy">
+      <figcaption>A tool call driven by an injected instruction being blocked.</figcaption>
+    </figure>
 
-        <div class="proj-section">
-          <h4>What I Built</h4>
-          <ul>
-            <li><strong>Matching Engine:</strong> Price-time priority with FIFO fairness. Limit, market, IOC, FOK, POST_ONLY, and STP order types with deterministic fill semantics.</li>
-            <li><strong>Performance Engineering:</strong> Slab allocators eliminate heap fragmentation, branch elimination reduces misprediction cost, cache-hot pointer layouts maximize L1 hit rate, CPU pinning eliminates NUMA penalties.</li>
-            <li><strong>Market Data:</strong> WebSocket + REST connector for Binance US feeds, normalization to Parquet. Replay engine regenerates TAQ-style quotes and trades at 1×–100× speed.</li>
-            <li><strong>Analytics:</strong> Spread, imbalance, depth, volatility, impact curves. VWAP, TWAP, POV, and Iceberg execution strategies with reproducible PnL.</li>
-            <li><strong>Crash Recovery:</strong> Snapshot/resume proof — mid-file restart produces identical fills and PnL as single-pass replay.</li>
-            <li><strong>Tooling:</strong> Streamlit dashboard for real-time replay, Docker + GitHub Actions CI, one-command HTML report generator.</li>
-          </ul>
-        </div>
+    <p>On 4,200+ test cases across five attack families, the attack success rate falls from 100% with no defense to 48%. For attacks that try to trigger write tools it falls to 0%. The false positive rate is 0.6%, and a check adds 0.16&nbsp;ms on average because it never calls another model. Policies are written in YAML, and there are 839 tests, including 26 scenarios run against real filesystem, git, and SQLite MCP servers.</p>
+  </section>
 
-        <div class="proj-section">
-          <h4>Results</h4>
-          <div class="proj-metrics">
-            <span class="proj-metric">
-              20.7M msgs/sec
-              <span class="metric-note">local benchmark</span>
-            </span>
-            <span class="proj-metric">
-              p50 = 0.04 µs
-              <span class="metric-note">single-threaded</span>
-            </span>
-            <span class="proj-metric">
-              p99 ≈ 1 µs
-              <span class="metric-note">1M event replay</span>
-            </span>
-            <span class="proj-metric">Deterministic replay</span>
-            <span class="proj-metric">Full analytics suite</span>
-          </div>
-          <p class="metric-note" style="margin-top:var(--s4);font-family:var(--font-mono);font-size:0.72rem;color:var(--muted);line-height:1.6;">Synthetic local benchmark — single-threaded, compiler-optimized build. Hardware spec and benchmark harness in the <a href="https://github.com/mansoor-mamnoon/limit-order-book#readme" target="_blank" rel="noopener" style="color:var(--metric);">GitHub README</a>.</p>
-        </div>
+  <section class="project" id="orderbook">
+    <h2>C++20 matching engine</h2>
+    <p class="meta">C++20, Python, Docker, Streamlit &middot; Jul&ndash;Aug 2025 &middot; <a href="https://github.com/mansoor-mamnoon/limit-order-book">GitHub</a></p>
 
-        <div class="proj-section">
-          <h4>Stack</h4>
-          <div class="proj-stack-chips">
-            <span class="proj-stack-chip">C++20</span>
-            <span class="proj-stack-chip">Python</span>
-            <span class="proj-stack-chip">FastAPI</span>
-            <span class="proj-stack-chip">WebSocket</span>
-            <span class="proj-stack-chip">pandas / NumPy</span>
-            <span class="proj-stack-chip">Docker</span>
-            <span class="proj-stack-chip">Streamlit</span>
-            <span class="proj-stack-chip">GitHub Actions</span>
-          </div>
-        </div>
+    <p>A limit order book and matching engine like the one at the center of an exchange. Orders match by price and then by arrival time, and it supports limit, market, IOC, FOK, post-only, and self-trade-prevention orders.</p>
 
-        <div class="proj-links">
-          <a href="https://github.com/mansoor-mamnoon/limit-order-book" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Limit Order Book source on GitHub">GitHub ↗</a>
-          <a href="https://github.com/mansoor-mamnoon/limit-order-book#readme" class="btn" target="_blank" rel="noopener" aria-label="Limit Order Book design notes on GitHub">Design Notes ↗</a>
-        </div>
-      </div>
+    <p>Speed came from avoiding the usual costs. Orders live in slab allocators instead of being allocated one at a time, the price levels are laid out so the hot ones stay in cache, I removed branches from the matching loop, and the engine thread is pinned to a CPU. On one thread it handles 20.7 million messages a second, with a median latency of 0.04&nbsp;&micro;s and a p99 of about 1&nbsp;&micro;s over a 1M-event replay. Those numbers are from a synthetic benchmark on my machine; the <a href="https://github.com/mansoor-mamnoon/limit-order-book#readme">README</a> lists the hardware and the harness.</p>
 
-      <!-- vxlan-tracer -->
-      <div class="proj-panel" id="vxlantracer" role="region" aria-label="vxlan-tracer project detail">
-        <h2 class="proj-panel-title">vxlan-tracer</h2>
-        <p class="proj-panel-summary">eBPF diagnostic tool for VXLAN MTU blackholes — the silent network failure where large payloads stall with no error logged while small pings pass.</p>
+    <p>Around the engine there's a Python pipeline that pulls Binance US market data, stores it as Parquet, and replays it at 1&times; to 100&times; speed to backtest VWAP, TWAP, POV, and iceberg strategies. The engine can snapshot and resume, and restarting from the middle of a file produces exactly the same fills and PnL.</p>
+  </section>
 
-        <div class="proj-demo">
-          <img src="assets/vxlan_tracer_demo.gif" alt="vxlan-tracer demo: interface discovery and VXLAN_FRAGMENTATION_OBSERVED verdict" width="944" height="647" loading="lazy" style="width:100%;border-radius:var(--radius);border:1px solid var(--border);">
-        </div>
+  <section class="project" id="offlinerl">
+    <h2>Offline RL agent</h2>
+    <p class="meta">Python, PyTorch &middot; May&ndash;Jun 2025 &middot; <a href="https://github.com/mansoor-mamnoon/offline-rl-agent">GitHub</a></p>
 
-        <div class="project-brief">
-          <div>
-            <span class="brief-label">Problem</span>
-            <p>VXLAN overlay networks silently drop packets when the overlay MTU is misconfigured: small traffic passes, large payloads stall, and no error is logged anywhere. <code>kubectl cp</code> hangs. Large API responses never arrive. The only signal is a timing correlation between payload size and hang — which most operators never notice is MTU-related.</p>
-          </div>
-          <div>
-            <span class="brief-label">System</span>
-            <p>Four BPF programs attach simultaneously: TC sched_cls hooks on the overlay egress (reads outer packet size before VXLAN encapsulation) and underlay ingress (counts arriving ICMP PTBs), plus kprobes on <code>ip_do_fragment</code> (fragmentation events) and <code>icmp_rcv</code> (PTBs reaching the kernel). The four counters are read from pinned BPF maps after the measurement window and combined into one of six verdicts. TC ownership is verified with an exact 3-tuple (priority 50000, handle 0x7674_0001, kernel-assigned BPF program ID) so cleanup never removes a filter it doesn't own.</p>
-          </div>
-          <div>
-            <span class="brief-label">Proof</span>
-            <p>6/6 verdict scenarios confirmed on Linux 5.15 (aarch64). TC coexistence: 20/20 cases pass — unrelated CNI filters survive, priority-collision filters are never deleted, SIGINT/SIGTERM cleanup is complete, repeated runs succeed without manual teardown. Builds to arm64 and amd64 static binaries with 4 embedded BPF objects.</p>
-          </div>
-        </div>
+    <p>Most offline RL work reports average return and stops there. I wanted to answer the questions you'd ask before deploying a policy trained on logs: is it safe, and where will it fail?</p>
 
-        <div class="proj-section">
-          <h4>What I Built</h4>
-          <ul>
-            <li><strong>4 BPF programs:</strong> TC ingress (counts ICMP PTBs arriving at underlay), TC egress (records max outer IP size on overlay), kprobe/<code>ip_do_fragment</code> (fragmentation counter), kprobe/<code>icmp_rcv</code> (PTBs reaching kernel ICMP handler). All loaded via cilium/ebpf with BTF CO-RE — no kernel headers required.</li>
-            <li><strong>6 verdict types:</strong> <code>VXLAN_FRAGMENTATION_OBSERVED</code>, <code>PTB_SUPPRESSED</code>, <code>PTB_DELIVERED</code>, <code>VXLAN_MTU_MISCONFIGURATION</code>, <code>VXLAN_MTU_OK</code>, <code>NO_SIGNAL</code>. Each verdict includes corroborating evidence fields and a human-readable recommendation.</li>
-            <li><strong>TC lifecycle safety:</strong> Collision check before attach (returns error, never deletes foreign filters). Cleanup re-lists the kernel's filter table and verifies handle + priority + BPF program ID before deleting. Partial attach failure triggers rollback of exactly what was recorded — no leaking clsact qdiscs. <code>Close()</code> is idempotent.</li>
-            <li><strong>Interface discovery:</strong> <code>vxlan-tracer interfaces</code> lists VXLAN overlays and infers the underlay from the VTEP device index via rtnetlink — no root required.</li>
-            <li><strong>Concurrent-run protection:</strong> <code>flock(LOCK_EX|LOCK_NB)</code> on <code>/run/vxlan-tracer.lock</code> — second invocation fails immediately with a clear error.</li>
-            <li><strong>Privacy-safe diagnostics:</strong> <code>vxlan-tracer collect-environment</code> creates a tar.gz with kernel version, VXLAN interface names/VNIs/MTUs, BTF status, and symbol availability — no IP addresses, no routes, no process lists.</li>
-            <li><strong><code>vxlan-tracer cleanup</code>:</strong> removes stale filters left by a crashed run without touching anything vxlan-tracer doesn't own.</li>
-          </ul>
-        </div>
+    <p>The framework implements six algorithms (BC, CQL, IQL, TD3+BC, Decision Transformer, AWAC) and two simulators, a traffic router with SLO constraints and incidents and a hospital treatment model. It checks how well the logged data covers the actions a policy wants to take, estimates performance offline three ways (FQE, weighted importance sampling, doubly robust) with bootstrap confidence intervals, and adds a policy shield for unsafe actions.</p>
 
-        <div class="proj-section">
-          <h4>Results</h4>
-          <div class="proj-metrics">
-            <span class="proj-metric">
-              4 BPF programs
-              <span class="metric-note">TC ingress · TC egress · 2 kprobes</span>
-            </span>
-            <span class="proj-metric">
-              6 verdict paths
-              <span class="metric-note">all confirmed on Linux 5.15</span>
-            </span>
-            <span class="proj-metric">
-              20/20 TC coexistence
-              <span class="metric-note">Cases A–F including SIGINT/SIGTERM</span>
-            </span>
-            <span class="proj-metric">arm64 + amd64</span>
-            <span class="proj-metric">BTF CO-RE (no kernel headers)</span>
-          </div>
-        </div>
+    <figure>
+      <img src="assets/offline_rl_traffic.gif" alt="Animation of the traffic routing simulator under a learned policy" width="600" height="180" loading="lazy">
+      <figcaption>The traffic routing simulator.</figcaption>
+    </figure>
 
-        <div class="proj-section">
-          <h4>Stack</h4>
-          <div class="proj-stack-chips">
-            <span class="proj-stack-chip">Go</span>
-            <span class="proj-stack-chip">eBPF / C</span>
-            <span class="proj-stack-chip">TC sched_cls</span>
-            <span class="proj-stack-chip">kprobes</span>
-            <span class="proj-stack-chip">BTF CO-RE</span>
-            <span class="proj-stack-chip">Linux netlink</span>
-            <span class="proj-stack-chip">cilium/ebpf</span>
-          </div>
-        </div>
+    <p>On the traffic task CQL reaches a return of about 72 against about 51 for the policy that generated the logs, with 3% SLO violations instead of 8%. The FQE estimate's 95% interval is [65.1, 74.5] across three seeds.</p>
+  </section>
 
-        <div class="proj-links">
-          <a href="https://github.com/mansoor-mamnoon/vxlan-tracer" class="btn btn-primary" target="_blank" rel="noopener" aria-label="vxlan-tracer source on GitHub">GitHub ↗</a>
-          <a href="https://github.com/mansoor-mamnoon/vxlan-tracer#readme" class="btn" target="_blank" rel="noopener" aria-label="vxlan-tracer design notes on GitHub">Design Notes ↗</a>
-        </div>
-      </div>
+  <section class="project" id="edgedeployer">
+    <h2>Edge Deployer</h2>
+    <p class="meta">Electron, React, TypeScript, Pulumi &middot; Mar&ndash;May 2025 &middot; <a href="https://github.com/mansoor-mamnoon/edge-deployer">GitHub</a></p>
 
-      <!-- Edge Deployer -->
-      <div class="proj-panel" id="edgedeployer" role="region" aria-label="Edge Deployer project detail">
-        <h2 class="proj-panel-title">Edge Deployer — Serverless IDE</h2>
-        <p class="proj-panel-summary">Native desktop IDE for writing, previewing, deploying, and observing serverless functions across 6 cloud providers from a single window.</p>
+    <p>Writing a serverless function usually means a terminal for deploys, a browser tab for logs, Postman for testing, and another CLI for secrets. Edge Deployer puts all of that in one desktop app.</p>
 
-        <div class="proj-demo">
-          <img src="assets/edge_deployer_demo.gif" alt="Edge Deployer demo: write, preview, deploy to Cloudflare" width="1200" height="748" loading="lazy" style="width:100%;border-radius:var(--radius);border:1px solid var(--border);">
-        </div>
+    <figure>
+      <img src="assets/edge_deployer_demo.gif" alt="Screen recording: writing a function, previewing it, and deploying it to Cloudflare in Edge Deployer" width="1200" height="748" loading="lazy">
+      <figcaption>Write, preview locally, deploy to Cloudflare.</figcaption>
+    </figure>
 
-        <div class="project-brief">
-          <div>
-            <span class="brief-label">Problem</span>
-            <p>Serverless edge development is fragmented: deploy from the terminal, watch logs in a browser dashboard, test in Postman, manage secrets in a separate CLI, generate infra in Terraform. Every context switch breaks flow.</p>
-          </div>
-          <div>
-            <span class="brief-label">System</span>
-            <p>Electron app with Monaco editor, live edge runtime simulator (no cloud account needed to preview), 6-provider deploy engine behind a shared <code>IDeployer</code> interface, AI assistant (Claude API), P50/P95/P99 load tester, observability panel, AES-256-GCM secrets vault, IaC export (Pulumi/Terraform/Wrangler/Docker+K8s), and a sandboxed plugin system.</p>
-          </div>
-          <div>
-            <span class="brief-label">Proof</span>
-            <p>All 3 phases complete (Core → Ecosystem → Trust). 6 providers deployed from one window. 85 tests across 6 suites. Pre-built binaries for macOS, Windows, and Linux on every tagged release.</p>
-          </div>
-        </div>
-
-        <div class="proj-section">
-          <h4>What I Built</h4>
-          <ul>
-            <li><strong>Multi-cloud deploy engine:</strong> Cloudflare Workers, AWS Lambda, Vercel, Netlify, Fly.io, and Railway each implement a shared 7-method <code>IDeployer</code> interface — deploy, rollback, import, drift-detect, log-tail. Adding a new provider is under 300 lines.</li>
-            <li><strong>Live edge runtime simulator:</strong> preview iframe runs a full Cloudflare Workers simulation — <code>fetch</code> events, in-memory KV, console capture, hot-reload (400ms debounce), 5s timeout guard.</li>
-            <li><strong>AI assistant:</strong> Claude API with editor code injected as context — explain, debug, add CORS/auth, optimize cold starts, generate rate limiters. Key stored in the encrypted vault, never sent except on explicit Send.</li>
-            <li><strong>Observability:</strong> structured log stream per deploy/rollback/test event, stat cards, P50/P95/P99 percentiles, SVG sparkline.</li>
-            <li><strong>Load tester:</strong> configurable RPS (10/50/100+ or custom), live progress, final P50/P95/P99 report, cold-start outlier detection.</li>
-            <li><strong>Security scanner:</strong> 10 rules (4 critical) running on every keystroke — zero latency pure-regex. Critical issues block deployment.</li>
-            <li><strong>Encrypted secrets vault:</strong> AES-256-GCM with PBKDF2 (100,000 iterations), machine-keyed. Credentials excluded at the TypeScript type level — impossible to accidentally commit.</li>
-            <li><strong>IaC export:</strong> Pulumi, Terraform, Wrangler, Docker+K8s — all configs include IAM roles, resource bindings, health probes.</li>
-            <li><strong>Plugin system:</strong> <code>vm.Context</code> sandbox with explicit permission manifests. Hooks: <code>onBeforeDeploy</code>, <code>onAfterDeploy</code>, <code>onCodeTransform</code>. 5s execution timeout.</li>
-            <li><strong>Cloud import + drift detection:</strong> pulls deployed code back into the editor; shows color-coded unified diff vs. local.</li>
-            <li><strong>13 worker templates, 7 marketplace plugins, WebSocket tester, telemetry opt-in (3 levels).</strong></li>
-          </ul>
-        </div>
-
-        <div class="proj-section">
-          <h4>Results</h4>
-          <div class="proj-metrics">
-            <span class="proj-metric">
-              6 deploy providers
-              <span class="metric-note">Cloudflare · AWS · Vercel · Netlify · Fly.io · Railway</span>
-            </span>
-            <span class="proj-metric">
-              85 tests, 6 suites
-              <span class="metric-note">securityScanner · loadTestStats · cloudDeployers · pluginSandbox · secretsVault · workspace</span>
-            </span>
-            <span class="proj-metric">
-              4 IaC formats
-              <span class="metric-note">Pulumi · Terraform · Wrangler · Docker+K8s</span>
-            </span>
-            <span class="proj-metric">10 security rules</span>
-            <span class="proj-metric">13 templates · 7 plugins</span>
-          </div>
-        </div>
-
-        <div class="proj-section">
-          <h4>Stack</h4>
-          <div class="proj-stack-chips">
-            <span class="proj-stack-chip">Electron</span>
-            <span class="proj-stack-chip">React 19</span>
-            <span class="proj-stack-chip">TypeScript 5.8</span>
-            <span class="proj-stack-chip">Monaco Editor</span>
-            <span class="proj-stack-chip">Pulumi</span>
-            <span class="proj-stack-chip">Cloudflare API</span>
-            <span class="proj-stack-chip">AWS SDK</span>
-            <span class="proj-stack-chip">Vercel REST API</span>
-            <span class="proj-stack-chip">Claude API</span>
-            <span class="proj-stack-chip">GitHub Actions</span>
-          </div>
-        </div>
-
-        <div class="proj-links">
-          <a href="https://github.com/mansoor-mamnoon/edge-deployer" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Edge Deployer source on GitHub">GitHub ↗</a>
-          <a href="https://github.com/mansoor-mamnoon/edge-deployer#readme" class="btn" target="_blank" rel="noopener" aria-label="Edge Deployer design notes on GitHub">Design Notes ↗</a>
-        </div>
-      </div>
-
-      <!-- Offline RL Agent -->
-      <div class="proj-panel" id="offlinerl" role="region" aria-label="Offline RL Agent project detail">
-        <h2 class="proj-panel-title">Offline RL Agent</h2>
-        <p class="proj-panel-summary">Framework for training, evaluating, and stress-testing offline RL policies from static logs under safety constraints — with tools to answer whether a policy is actually safe to deploy.</p>
-
-        <div class="proj-demo" style="display:flex;gap:var(--s3);flex-wrap:wrap;">
-          <img src="assets/offline_rl_traffic.gif" alt="Traffic routing policy: safe vs. random baseline" width="600" height="180" loading="lazy" style="flex:1;min-width:240px;border-radius:var(--radius);border:1px solid var(--border);">
-          <img src="assets/offline_rl_diagnostics.gif" alt="Dataset diagnostics: coverage, OOD risk, entropy" width="560" height="320" loading="lazy" style="flex:1;min-width:240px;border-radius:var(--radius);border:1px solid var(--border);">
-        </div>
-
-        <div class="project-brief">
-          <div>
-            <span class="brief-label">Problem</span>
-            <p>Standard offline RL papers optimize for expected return on benchmark datasets and ignore deployment safety. They don't answer: Is this policy safe? Where will it fail? What does the training data actually cover? Datasets collected from suboptimal operators contain the coverage gaps that cause offline RL policies to fail in production.</p>
-          </div>
-          <div>
-            <span class="brief-label">System</span>
-            <p>6-algorithm framework (BC, CQL, IQL, TD3+BC, Decision Transformer, AWAC) with a 32-dimensional traffic routing simulator (SLO constraints, incidents, diurnal patterns), hospital treatment simulator, dataset diagnostics module, three OPE estimators (FQE/WIS/DR) with bootstrap CIs, policy shield, constraint critic, and causal failure explorer.</p>
-          </div>
-          <div>
-            <span class="brief-label">Proof</span>
-            <p>CQL achieves ~72 return vs. ~51 behavioral baseline with 3% SLO violations (vs. 8% behavioral). Bootstrap CI narrows FQE estimate to [65.1, 74.5]. Reproduce: <code>make reproduce-small</code>.</p>
-          </div>
-        </div>
-
-        <div class="proj-section">
-          <h4>What I Built</h4>
-          <ul>
-            <li><strong>6 algorithms:</strong> Behavior Cloning, CQL, IQL, TD3+BC, Decision Transformer, AWAC — all with consistent interfaces, safety constraints, and OPE support.</li>
-            <li><strong>Traffic routing simulator:</strong> 32-dim state space with SLO constraints, backend failures, incidents, and diurnal patterns. Mirrors real infrastructure management where offline exploration is dangerous.</li>
-            <li><strong>Hospital treatment simulator:</strong> safety-constrained environment with forbidden actions and patient state dynamics.</li>
-            <li><strong>Dataset diagnostics:</strong> coverage score, behavior entropy, OOD risk estimation, outlier detection, reward skew — outputs actionable warnings before training.</li>
-            <li><strong>Offline policy evaluation:</strong> FQE, Weighted Importance Sampling, Doubly Robust estimators with bootstrap CIs — estimate true return without online interaction.</li>
-            <li><strong>Safety layer:</strong> CVaR-5%, SLO violation rate, OOD action rate, catastrophic failure rate. Policy shield with three intervention strategies. Constraint critic (multi-constraint Q-function) for safety-aware action filtering.</li>
-            <li><strong>Failure explorer:</strong> causal analysis of policy failures with counterfactual explanations and dashboard integration.</li>
-            <li><strong>Streamlit dashboard + HTML reports:</strong> interactive dataset diagnostics, training run comparison, policy comparison. Self-contained single-file HTML reports with embedded plots.</li>
-            <li><strong>CLI:</strong> <code>orl train</code>, <code>orl diagnose</code>, <code>orl evaluate</code>, <code>orl report</code>, <code>orl dashboard</code>.</li>
-          </ul>
-        </div>
-
-        <div class="proj-section">
-          <h4>Results</h4>
-          <div class="proj-metrics">
-            <span class="proj-metric">
-              CQL: ~72 return
-              <span class="metric-note">vs. ~51 behavioral baseline</span>
-            </span>
-            <span class="proj-metric">
-              3% SLO violations
-              <span class="metric-note">CQL vs. 8% behavioral</span>
-            </span>
-            <span class="proj-metric">
-              FQE [65.1, 74.5]
-              <span class="metric-note">bootstrap 95% CI</span>
-            </span>
-            <span class="proj-metric">6 algorithms benchmarked</span>
-            <span class="proj-metric">3 seeds · 50 epochs</span>
-          </div>
-        </div>
-
-        <div class="proj-section">
-          <h4>Stack</h4>
-          <div class="proj-stack-chips">
-            <span class="proj-stack-chip">Python</span>
-            <span class="proj-stack-chip">PyTorch</span>
-            <span class="proj-stack-chip">NumPy</span>
-            <span class="proj-stack-chip">Streamlit</span>
-            <span class="proj-stack-chip">Matplotlib</span>
-            <span class="proj-stack-chip">pytest</span>
-          </div>
-        </div>
-
-        <div class="proj-links">
-          <a href="https://github.com/mansoor-mamnoon/offline-rl-agent" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Offline RL Agent source on GitHub">GitHub ↗</a>
-          <a href="https://github.com/mansoor-mamnoon/offline-rl-agent#readme" class="btn" target="_blank" rel="noopener" aria-label="Offline RL Agent design notes on GitHub">Design Notes ↗</a>
-        </div>
-      </div>
-
-    </section>
-  </div>
+    <p>Each of the six providers (Cloudflare Workers, AWS Lambda, Vercel, Netlify, Fly.io, Railway) implements the same seven-method deployer interface, so deploy, rollback, and drift detection work the same everywhere. You can preview Workers locally without a cloud account, export the setup as Pulumi, Terraform, Wrangler, or Docker plus Kubernetes, and load test with a P50/P95/P99 report. Secrets are kept in an AES-256-GCM vault, and plugins run in a sandbox with explicit permissions. There are 85 tests, and GitHub Actions builds binaries for macOS, Windows, and Linux.</p>
+  </section>
 </main>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <p class="footer-copy">© 2026 Mansoor Mamnoon</p>
-    <nav class="footer-links">
-      <a href="notes.html" class="footer-link">Notes</a>
-      <a href="https://github.com/mansoor-mamnoon" class="footer-link" target="_blank" rel="noopener">GitHub ↗</a>
-      <a href="https://linkedin.com/in/mansoormamnoon" class="footer-link" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="mailto:mansoormmamnoon@berkeley.edu" class="footer-link">Email</a>
-      <a href="assets/Mansoor_Mamnoon_Resume.pdf" class="footer-link" target="_blank" rel="noopener">Resume ↓</a>
-    </nav>
-  </div>
+<footer class="site-footer">
+  <p>Mansoor Mamnoon &middot; <a href="mailto:mansoormmamnoon@berkeley.edu">Email</a> &middot; <a href="https://github.com/mansoor-mamnoon">GitHub</a> &middot; <a href="https://linkedin.com/in/mansoormamnoon">LinkedIn</a></p>
 </footer>
 
-<div id="toast" class="toast" role="status" aria-live="polite"></div>
-<script src="main.js"></script>
 </body>
 </html>

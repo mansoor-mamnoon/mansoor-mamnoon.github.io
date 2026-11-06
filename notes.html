@@ -3,40 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Engineering Notes — Mansoor Mamnoon</title>
-  <meta name="description" content="Engineering notes by Mansoor Mamnoon on distributed systems, databases, compilers, networking, and secure AI tooling. UC Berkeley EECS Honors, 2027.">
+  <title>Notes | Mansoor Mamnoon</title>
+  <meta name="description" content="Short notes by Mansoor Mamnoon on systems, databases, compilers, networking, and security.">
   <meta name="robots" content="index, follow">
-  <meta property="og:title"       content="Engineering Notes — Mansoor Mamnoon">
-  <meta property="og:description" content="Short technical notes on distributed systems, eBPF, Linux networking, databases, compilers, and secure AI tooling by Mansoor Mamnoon (Berkeley EECS).">
-  <meta property="og:image"       content="https://mansoor-mamnoon.github.io/preview.webp">
-  <meta property="og:url"         content="https://mansoor-mamnoon.github.io/notes.html">
-  <meta property="og:type"        content="website">
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Engineering Notes — Mansoor Mamnoon">
-  <meta name="twitter:description" content="Technical notes on distributed systems, eBPF, Linux networking, databases, compilers, and networking by Mansoor Mamnoon (Berkeley EECS, former Databricks intern).">
-  <meta name="twitter:image"       content="https://mansoor-mamnoon.github.io/preview.webp">
-  <meta name="keywords" content="Mansoor Mamnoon, engineering notes, distributed systems, eBPF, VXLAN, Linux networking, Envoy xDS, ARIES recovery, SPSC ring buffer, taint tracking, LLM security, compilers, short-circuit codegen, databases, Berkeley EECS">
+  <meta property="og:title" content="Notes | Mansoor Mamnoon">
+  <meta property="og:description" content="Short notes on Envoy xDS, ARIES recovery, SPSC ring buffers, taint tracking for LLM tools, and short-circuit codegen.">
+  <meta property="og:image" content="https://mansoor-mamnoon.github.io/preview.webp">
+  <meta property="og:url" content="https://mansoor-mamnoon.github.io/notes.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Notes | Mansoor Mamnoon">
+  <meta name="twitter:description" content="Short notes on systems, databases, compilers, networking, and security.">
+  <meta name="twitter:image" content="https://mansoor-mamnoon.github.io/preview.webp">
   <link rel="canonical" href="https://mansoor-mamnoon.github.io/notes.html">
   <link rel="alternate" type="text/plain" title="LLM-readable profile" href="https://mansoor-mamnoon.github.io/llms.txt">
-
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://mansoor-mamnoon.github.io/"},
-    {"@type":"ListItem","position":2,"name":"Notes","item":"https://mansoor-mamnoon.github.io/notes.html"}
-  ]}
-  </script>
-
-  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <script>(function(){var t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})();</script>
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6BWCTKVQ3"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -47,171 +31,75 @@
 </head>
 <body>
 
-<div id="scroll-progress" aria-hidden="true"></div>
-
-<div id="cmd-overlay" class="cmd-overlay" hidden role="dialog" aria-modal="true" aria-label="Command palette">
-  <div class="cmd-box">
-    <div class="cmd-input-wrap">
-      <span class="cmd-prompt" aria-hidden="true">›</span>
-      <input id="cmd-input" type="text" placeholder="Type a command..." autocomplete="off" spellcheck="false" aria-label="Command search">
-    </div>
-    <ul id="cmd-list" class="cmd-list" role="listbox"></ul>
-    <div class="cmd-footer" aria-hidden="true">
-      <span class="cmd-hint"><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
-      <span class="cmd-hint"><kbd>↵</kbd> select</span>
-      <span class="cmd-hint"><kbd>esc</kbd> close</span>
-    </div>
-  </div>
-</div>
-
-<header>
-  <nav class="nav" aria-label="Site navigation">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="Mansoor Mamnoon — Home">Mansoor Mamnoon</a>
-      <div class="nav-links">
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="experience.html" class="nav-link">Experience</a>
-        <a href="notes.html" class="nav-link active">Notes</a>
-        <a href="about.html" class="nav-link">About</a>
-      </div>
-      <div class="nav-actions">
-        <a href="resume.html" class="nav-resume">Resume</a>
-        <button id="cmd-hint" class="nav-icon-btn nav-cmd-subtle" title="Command palette (⌘K)">⌘K</button>
-        <button id="theme-toggle" class="nav-icon-btn" aria-label="Toggle theme">◐</button>
-      </div>
-      <button id="nav-hamburger" class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">☰</button>
-    </div>
+<header class="site-header">
+  <a class="site-name" href="index.html">Mansoor Mamnoon</a>
+  <nav aria-label="Site">
+    <a href="projects.html">Projects</a>
+    <a href="experience.html">Experience</a>
+    <a href="notes.html" aria-current="page">Notes</a>
+    <a href="about.html">About</a>
+    <a href="resume.html">Resume</a>
   </nav>
-  <div id="nav-drawer" class="nav-drawer">
-    <a href="projects.html" class="nav-link">Projects</a>
-    <a href="experience.html" class="nav-link">Experience</a>
-    <a href="notes.html" class="nav-link active">Notes</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="resume.html" class="nav-resume">Resume</a>
-  </div>
 </header>
 
 <main>
-  <div class="page">
+  <h1>Notes</h1>
 
-    <div style="padding: var(--s10) 0 var(--s6); border-bottom: 1px solid var(--border);">
-      <h1 style="font-size:1.8rem; margin-bottom:var(--s3)">Engineering Notes — Mansoor Mamnoon</h1>
-      <p style="font-size:0.9rem; color:var(--muted); max-width:520px; line-height:1.65">Short engineering notes on the systems ideas I am actively learning and building with. Concise by design.</p>
-    </div>
+  <p>Short write-ups of things I've been learning. Writing them down is how I find out whether I actually understand them.</p>
 
-    <div class="notes-filter" role="group" aria-label="Filter notes by category">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="systems">Systems</button>
-      <button class="filter-btn" data-filter="databases">Databases</button>
-      <button class="filter-btn" data-filter="compilers">Compilers</button>
-      <button class="filter-btn" data-filter="security">Security</button>
-      <button class="filter-btn" data-filter="networking">Networking</button>
-    </div>
+  <ul>
+    <li><a href="#xds-control-plane">How Envoy's xDS gets config to the data plane</a></li>
+    <li><a href="#taint-tracking-llm">Taint tracking for LLM tool calls</a></li>
+    <li><a href="#aries-recovery">ARIES recovery on one page</a></li>
+    <li><a href="#short-circuit-codegen">Compiling <code>&amp;&amp;</code> and <code>||</code></a></li>
+    <li><a href="#spsc-ring-buffer">Why the SPSC ring buffer needs no lock</a></li>
+  </ul>
 
-    <div role="list" aria-label="Notes">
+  <article class="note" id="xds-control-plane">
+    <h2>How Envoy's xDS gets config to the data plane</h2>
+    <p class="meta">May 2026 &middot; networking</p>
+    <p>xDS is the set of APIs a control plane uses to push configuration to Envoy proxies. Envoy doesn't poll for config. It opens a long-lived gRPC stream to the management server, and updates arrive on that stream as they happen.</p>
+    <p>There are four main resource types: listeners (LDS), routes (RDS), clusters (CDS), and endpoints (EDS). They refer to each other in a chain: a listener names a route config, a route sends traffic to a cluster, and a cluster gets its endpoints from EDS. If updates arrive in the wrong order, Envoy can briefly hold a route that points at a cluster it hasn't heard of yet, and that traffic fails.</p>
+    <p>The Aggregated Discovery Service (ADS) puts every resource type on one stream, so the server controls the order. The usual rule is make before break: send new clusters and their endpoints before the routes that use them, and remove old clusters only after nothing refers to them. This is the problem service mesh control planes like Istio and Linkerd have to solve.</p>
+  </article>
 
-      <article class="note-item reveal" id="xds-control-plane" data-category="networking" role="listitem">
-        <details>
-          <summary>
-            <time class="note-date" datetime="2026-05">2026-05</time>
-            <span class="note-title">Envoy's xDS control plane: how config reaches the data plane</span>
-            <span class="badge badge-tools note-tag">networking</span>
-            <span class="note-toggle" aria-hidden="true">›</span>
-          </summary>
-          <div class="note-body">
-            <p>xDS (discovery services) is the API by which a control plane pushes configuration to data-plane Envoy instances. The key insight: Envoy doesn't pull config on a schedule — it opens a long-lived gRPC stream to the management server and receives incremental updates. This is the Aggregated Discovery Service (ADS) pattern.</p>
-            <p>Resource types: <code>LDS</code> (listeners), <code>RDS</code> (routes), <code>CDS</code> (clusters), <code>EDS</code> (endpoints). The dependency order matters: LDS references RDS, RDS references CDS, CDS references EDS. ADS serializes updates so Envoy doesn't get a route pointing to a cluster it hasn't heard about yet.</p>
-            <p>Relevant for: service mesh control planes (Istio Pilot, Linkerd), Databricks Traffic Platform, any large-scale proxy fleet management.</p>
-          </div>
-        </details>
-      </article>
+  <article class="note" id="taint-tracking-llm">
+    <h2>Taint tracking for LLM tool calls</h2>
+    <p class="meta">April 2026 &middot; security</p>
+    <p>Taint analysis is an old program analysis idea: track whether untrusted data can reach a sensitive operation without being checked. User input flows through the program, and the question is whether it reaches a SQL query or a shell command unsanitized.</p>
+    <p>Tool-using LLM agents fit the same pattern. The source is a document or tool output the agent read. The model reasons over it, and the sink is another tool call: writing a file, running code, or sending a message. Prompt injection is untrusted text reaching that sink.</p>
+    <p>Detecting injected instructions alone isn't enough, because a well-written attack looks like an ordinary document. In <a href="projects.html#llmfirewall">LLMFirewall</a> I label every piece of content with where it came from, and content from an untrusted source can't authorize a write or send tool, however harmless it looks. The detectors still run, but the label decides.</p>
+  </article>
 
-      <article class="note-item reveal" id="taint-tracking-llm" data-category="security" role="listitem">
-        <details>
-          <summary>
-            <time class="note-date" datetime="2026-04">2026-04</time>
-            <span class="note-title">Why taint tracking applies to LLM tool calls</span>
-            <span class="badge badge-security note-tag">security</span>
-            <span class="note-toggle" aria-hidden="true">›</span>
-          </summary>
-          <div class="note-body">
-            <p>Taint analysis, a classical program analysis technique, tracks whether untrusted data can flow to sensitive sinks without being sanitized. The same model applies cleanly to tool-using LLM agents.</p>
-            <p>In classic taint analysis: source (user input) → propagation (through program logic) → sink (SQL query, shell exec). The question is whether untrusted source data reaches a dangerous sink unsanitized.</p>
-            <p>In LLM tool-use: source (untrusted document retrieved by a tool) → propagation (LLM processes and reasons over it) → sink (another tool call, e.g., writing a file, running code, exfiltrating memory). The attack is prompt injection — malicious instructions embedded in retrieved documents hijack the agent's next action.</p>
-            <p>LLMFirewall implements taint tracking by assigning a trust level to each document the agent reads, then checking whether high-capability tool calls (file writes, shell execution) are being triggered with arguments that seem to contain injected instructions rather than agent-generated content.</p>
-          </div>
-        </details>
-      </article>
+  <article class="note" id="aries-recovery">
+    <h2>ARIES recovery on one page</h2>
+    <p class="meta">April 2026 &middot; databases</p>
+    <p>ARIES is the write-ahead-logging recovery algorithm most production databases use some version of. It rests on one rule: the log record for a change must reach disk before the changed page does. On restart it runs three passes.</p>
+    <p><strong>Analysis</strong> scans forward from the last checkpoint and rebuilds two tables: the dirty page table (pages changed in memory but maybe not on disk) and the transaction table (transactions still running at the crash).</p>
+    <p><strong>Redo</strong> starts at the oldest change recorded in the dirty page table and reapplies every logged change, even ones from transactions that will be rolled back. After this pass the database is in exactly the state it was in at the crash.</p>
+    <p><strong>Undo</strong> rolls back the transactions that never committed. Each undo step is logged as a compensation log record, so if the system crashes again during recovery, the next recovery doesn't undo the same work twice.</p>
+  </article>
 
-      <article class="note-item reveal" id="spsc-ring-buffer" data-category="systems" role="listitem">
-        <details>
-          <summary>
-            <time class="note-date" datetime="2026-02">2026-02</time>
-            <span class="note-title">SPSC queues: why the lock-free ring buffer works</span>
-            <span class="badge badge-perf note-tag">systems</span>
-            <span class="note-toggle" aria-hidden="true">›</span>
-          </summary>
-          <div class="note-body">
-            <p>A single-producer single-consumer (SPSC) ring buffer is the canonical lock-free queue for high-throughput pipelines. The core insight: if only one thread writes the head pointer and only one thread reads the tail pointer, you never need a lock — you only need to ensure the writes are visible in the right order.</p>
-            <p>Implementation: circular array of capacity N. Producer writes to <code>buf[head % N]</code>, then increments <code>head</code> with a release store. Consumer reads <code>buf[tail % N]</code>, checks that <code>head != tail</code> with an acquire load, then increments <code>tail</code> with a release store. The acquire/release pairing ensures the data write is visible before the index update, and the index update is visible before the consumer reads.</p>
-            <p>Why it works for LOB: market data events flow from the network receive thread to the matching engine thread. SPSC eliminates all lock contention on the critical path. Cache line alignment of head and tail prevents false sharing — the two threads never fight over the same cache line.</p>
-          </div>
-        </details>
-      </article>
+  <article class="note" id="short-circuit-codegen">
+    <h2>Compiling <code>&amp;&amp;</code> and <code>||</code></h2>
+    <p class="meta">March 2026 &middot; compilers</p>
+    <p>The easy mistake is to compile <code>a &amp;&amp; b</code> like any other binary operator: evaluate both sides into registers, then AND them. That's wrong whenever evaluating <code>b</code> has side effects or can fail. <code>p != NULL &amp;&amp; p-&gt;x &gt; 0</code> will crash on exactly the input it was written to guard against.</p>
+    <p>The fix is to compile conditions as jumps instead of values. Pass each boolean expression two labels, where to go if it's true and where to go if it's false. For <code>a &amp;&amp; b</code>, <code>a</code> jumps to the false label if it fails and otherwise falls through to <code>b</code>, and <code>b</code> gets the original two labels. <code>||</code> is the mirror image, and <code>!</code> just swaps the labels. Nested conditions then compile by recursion, and you only produce a 0 or 1 in a register when the program actually stores the result.</p>
+    <p>I ran into this in CS 164. The textbook name is "jumping code", and backpatching is how a one-pass compiler fills in labels it doesn't know yet.</p>
+  </article>
 
-      <article class="note-item reveal" id="aries-recovery" data-category="databases" role="listitem">
-        <details>
-          <summary>
-            <time class="note-date" datetime="2026-04">2026-04</time>
-            <span class="note-title">ARIES recovery in one page</span>
-            <span class="badge badge-security note-tag">databases</span>
-            <span class="note-toggle" aria-hidden="true">›</span>
-          </summary>
-          <div class="note-body">
-            <p>ARIES (Algorithm for Recovery and Isolation Exploiting Semantics) is the standard WAL-based recovery algorithm used by most commercial databases. Three phases on restart:</p>
-            <p><strong>Analysis:</strong> Scan log forward from the last checkpoint. Reconstruct the dirty page table (pages modified but not yet written to disk) and the transaction table (active transactions at crash time). This tells you what needs to be redone and what transactions were in-flight.</p>
-            <p><strong>Redo:</strong> Replay history forward from the earliest LSN in the dirty page table. Every logged action is redone, even from transactions that will later be aborted. This restores the database to its exact pre-crash state.</p>
-            <p><strong>Undo:</strong> Roll back all transactions that were active at crash time (loser transactions). Undo is logged (CLRs — compensation log records) so undo itself is idempotent on a second crash.</p>
-            <p>Key invariant: <em>write-ahead logging</em> — the log record for a page modification must hit disk before the modified page does. This is what makes redo correct after a crash mid-write.</p>
-          </div>
-        </details>
-      </article>
-
-      <article class="note-item reveal" id="short-circuit-codegen" data-category="compilers" role="listitem">
-        <details>
-          <summary>
-            <time class="note-date" datetime="2026-03">2026-03</time>
-            <span class="note-title">Why short-circuit codegen is easy to get wrong</span>
-            <span class="badge badge-tools note-tag">compilers</span>
-            <span class="note-toggle" aria-hidden="true">›</span>
-          </summary>
-          <div class="note-body">
-            <p>Short-circuit evaluation for <code>&&</code> and <code>||</code> is simple to implement naively but breaks down in the presence of nested conditionals and control flow merges.</p>
-            <p>The naive approach: emit a conditional branch at each <code>&&</code> / <code>||</code> operand, jumping to a "false" or "true" label. The problem is that multiple branches need to merge to a single result before the outer expression can continue, and that merge point gets confused when the same variable appears in multiple sub-expressions with different liveness states.</p>
-            <p>The clean solution is to compile boolean expressions with an explicit "destination" parameter — either a "true branch" label or a "false branch" label — and thread this through the recursion. Each subexpression knows where to jump on success and where to jump on failure, avoiding the need for a merge point entirely. This is the "backpatching" or "destination-passing" style used in most production compilers.</p>
-            <p>Covered in CS 164 (Compilers) at Berkeley. Easy to see why it matters when you hit your first spec test for nested <code>&&</code> inside an <code>if</code> inside another <code>&&</code>.</p>
-          </div>
-        </details>
-      </article>
-
-    </div>
-
-  </div>
+  <article class="note" id="spsc-ring-buffer">
+    <h2>Why the SPSC ring buffer needs no lock</h2>
+    <p class="meta">February 2026 &middot; systems</p>
+    <p>A single-producer, single-consumer ring buffer is the standard lock-free queue between two threads. Only the producer ever writes <code>head</code> and only the consumer ever writes <code>tail</code>, so the threads never fight over a write. All they need is for each side's writes to become visible to the other in the right order.</p>
+    <p>The producer loads <code>tail</code> with acquire ordering and checks that <code>head - tail &lt; N</code>, so the buffer isn't full. It then writes the item into <code>buf[head % N]</code> and stores <code>head + 1</code> with release ordering. The consumer loads <code>head</code> with acquire ordering and checks that <code>head != tail</code>, so the buffer isn't empty. Only then does it read <code>buf[tail % N]</code>, and it stores <code>tail + 1</code> with release ordering.</p>
+    <p>The release store on one side pairs with the acquire load on the other. When the consumer sees the new <code>head</code>, it's guaranteed to see the item written before it. When the producer sees the new <code>tail</code>, it knows that slot has been read and can be reused. Putting <code>head</code> and <code>tail</code> on separate cache lines stops false sharing, so the two cores don't keep stealing one line from each other. In an order book this is how market data gets from the network thread to the matching thread without a lock on the hot path.</p>
+  </article>
 </main>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <p class="footer-copy">© 2026 Mansoor Mamnoon</p>
-    <nav class="footer-links">
-      <a href="https://github.com/mansoor-mamnoon" class="footer-link" target="_blank" rel="noopener">GitHub ↗</a>
-      <a href="https://linkedin.com/in/mansoormamnoon" class="footer-link" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="mailto:mansoormmamnoon@berkeley.edu" class="footer-link">Email</a>
-      <a href="assets/Mansoor_Mamnoon_Resume.pdf" class="footer-link" target="_blank" rel="noopener">Resume ↓</a>
-    </nav>
-  </div>
+<footer class="site-footer">
+  <p>Mansoor Mamnoon &middot; <a href="mailto:mansoormmamnoon@berkeley.edu">Email</a> &middot; <a href="https://github.com/mansoor-mamnoon">GitHub</a> &middot; <a href="https://linkedin.com/in/mansoormamnoon">LinkedIn</a></p>
 </footer>
 
-<div id="toast" class="toast" role="status" aria-live="polite"></div>
-<script src="main.js"></script>
 </body>
 </html>
